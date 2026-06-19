@@ -15,6 +15,8 @@ The pre-read is a single self-contained HTML page — just open `index.html` in 
 <!-- AUTO-LIST-START -->
 ## Files
 
+- [index.html](https://yonghuatrc.github.io/pages/index.html)
+
 <!-- AUTO-LIST-END -->
 
 ## Source of truth
