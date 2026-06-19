@@ -2,7 +2,7 @@
 
 Internal pre-read document for the **NUHS-GMIO × NCIS AI Study Trip to Shenzhen**, 19–22 July 2026.
 
-**Audience:** Dennis (GMIO), Marissa (NCIS, lead), Jane (GMIO)
+**Audience:** Dennis (GMIO), Marissa (GMIO, lead), Jane (GMIO)
 
 **Mission:** Understand how Shenzhen turns AI from demo into production — and what parts can realistically be adapted into Singapore's Epic + Synapxe-governed healthcare environment.
 
