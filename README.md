@@ -12,6 +12,11 @@ Internal pre-read document for the **NUHS-GMIO × NCIS AI Study Trip to Shenzhen
 
 The pre-read is a single self-contained HTML page — just open `index.html` in any modern browser. All images are embedded (no internet required after download).
 
+<!-- AUTO-LIST-START -->
+## Files
+
+<!-- AUTO-LIST-END -->
+
 ## Source of truth
 
 The canonical source lives at:
