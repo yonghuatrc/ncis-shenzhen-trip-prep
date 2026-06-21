@@ -82,6 +82,9 @@ body{-webkit-text-size-adjust:100%}
 
 /* ===== Responsive: tablets and smaller (≤768px) ===== */
 @media (max-width:768px){
+
+  .lang-toggle{top:12px;right:12px;font-size:12px}
+  .lang-toggle button{padding:6px 10px;font-size:12px}
   .page{padding:0 14px 60px}
   .hero{padding:36px 22px 32px;border-radius:0 0 20px 20px;margin-bottom:24px}
   .hero h1{font-size:26px;margin-bottom:8px}
@@ -135,10 +138,16 @@ body{-webkit-text-size-adjust:100%}
 }
 
 
+
+.lang-toggle{position:fixed;top:18px;right:18px;z-index:9999;display:inline-flex;background:white;border-radius:30px;padding:4px;box-shadow:0 4px 18px rgba(0,0,0,.18);border:1px solid #EAEEF6;font-size:13px;font-weight:600;user-select:none}
+.lang-toggle button{border:none;background:transparent;padding:7px 14px;border-radius:26px;cursor:pointer;color:#4A5568;font-weight:600;font-size:13px;transition:all .2s;letter-spacing:.5px}
+.lang-toggle button.active{background:var(--gradient-hero);color:white;box-shadow:0 2px 8px rgba(30,90,255,.3)}
+.lang-toggle button:hover:not(.active){background:#F8FAFC;color:#0B2545}
 @media print{body{background:white}.hero{box-shadow:none}}
 </style>
 </head>
 <body>
+<div class="lang-toggle" id="langToggle"><button data-lang="zh">简体</button><button data-lang="en">EN</button></div>
 <div class="page">
 
 <div class="hero">
@@ -610,5 +619,341 @@ body{-webkit-text-size-adjust:100%}
 </div>
 
 </div>
+
+<script>
+(function(){
+  const STORAGE_KEY = 'ncis-trip-lang';
+  const originals = [];
+  const titleOriginal = document.title;
+  const q = (s, r=document) => r.querySelector(s);
+  const qa = (s, r=document) => Array.from(r.querySelectorAll(s));
+  const bind = (el) => { if (el) originals.push({el, html: el.innerHTML}); return el; };
+  const restoreEnglish = () => { originals.forEach(({el, html}) => el.innerHTML = html); document.title = titleOriginal; document.documentElement.lang = 'en'; };
+
+  const heroTitle = bind(q('.hero h1'));
+  const heroSubtitle = bind(q('.hero .subtitle'));
+  const heroChipLabels = qa('.hero-meta .chip .label').map(bind);
+  const heroChipValues = qa('.hero-meta .chip .value').map(bind);
+  const summaryH2 = bind(q('.summary-card h2'));
+  const mission = bind(q('.summary-card .mission'));
+  const summaryH3s = qa('.summary-card h3').map(bind);
+  const visitWhats = qa('.visit-grid .visit .what').map(bind);
+  const top3Texts = qa('.top3 .item .text').map(bind);
+
+  const cards = qa('.visit-card').map(card => ({
+    card,
+    subhead: bind(q('.subhead', card)),
+    funLabel: bind(q('.fun-fact .label', card)),
+    funText: bind(q('.fun-fact .text', card)),
+    readMore: bind(q('.fun-fact .readmore', card)),
+    h3s: qa('.body > h3', card).map(bind),
+    whyList: qa('.why-list li', card).map(bind),
+    lookKeys: qa('.look-grid .k', card).map(bind),
+    lookVals: qa('.look-grid .k + div', card).map(bind),
+    questions: qa('.questions .q', card).map(bind),
+    transH3: bind(q('.translation-box h3', card)),
+    transP: bind(q('.translation-box p', card)),
+    transLis: qa('.translation-box li', card).map(bind),
+    takeaway: bind(q('.translation-box .takeaway', card))
+  }));
+
+  const sections = qa('.section').map(sec => ({
+    sec,
+    h2: bind(q('h2', sec)),
+    p: bind(q('p', sec)),
+    h3s: qa('h3', sec).map(bind),
+    olLis: qa('ol li', sec).map(bind),
+    pos: bind(q('.positioning', sec)),
+    ths: qa('th', sec).map(bind),
+    tds: qa('td', sec).map(bind)
+  }));
+  const footer = bind(q('.footer'));
+
+  const zh = {
+    title: 'NCIS 深圳 AI 学习考察 - 行前预读',
+    heroTitle: '&#127759; 深圳 AI 学习考察',
+    heroSubtitle: 'NUHS-GMIO NCIS 代表团行前预读 &middot; 2026年7月19日至22日',
+    heroChipLabels: ['谁','何时','地点','主办方'],
+    heroChipValues: ['Dennis &middot; Jane &middot; Marissa','7月19日（周日）&#8594; 7月22日（周三）','中国深圳','NCIS'],
+    summaryH2: '&#128203; 行程概览',
+    mission: '“我们这次考察的目标，是了解深圳如何把 AI 从演示概念真正做成可规模化落地的生产应用，以及其中哪些做法可以在新加坡 Epic + Synapxe 治理环境下被实际借鉴。”',
+    summaryH3s: ['六个参访点，六种不同视角','最值得记住的三件事'],
+    visitWhats: ['数字前端 &middot; AI 智能体','智慧医院基础设施','保险 + 健康 + AI','规模化与智能运营','AI + 生物医学研究','真实临床落地'],
+    top3: [
+      'AI 真正能规模化，靠的是<strong>工作流整合</strong>，不是孤立工具。',
+      '数据能力与平台成熟度，往往比<strong>模型噱头</strong>更重要。',
+      '新加坡必须<strong>借鉴而不是照搬</strong> —— Epic 与 Synapxe 的约束是真实存在的。'
+    ],
+    cards: [
+      {
+        subhead: '滨海大厦，南山区 &middot; 微信 + AI 智能体生态',
+        fun: '腾讯里的<strong>“Ten”</strong>来自创始人马化腾名字中的<strong>“腾”</strong>字，本身就有“腾飞”之意。他的第一桶金来自开发一个可在电脑上显示实时股票行情的硬件装置。如今，腾讯每天处理超过<strong>10亿笔微信支付交易</strong>，比 Visa 和 Mastercard 加起来还多。',
+        h3s: ['&#128269; 为什么重要','&#128269; 观察重点','&#128172; 可以提问的问题','&#127478;&#127386; 新加坡 / NCIS 借鉴'],
+        why: [
+          '腾讯在医疗场景中的真正优势，不只是单点 AI，而是它的<strong>生态能力</strong>：微信、小程序、支付、云、AI、数字身份、患者触达与医疗工具的结合。',
+          '其产品包括 <strong>微信智慧医疗</strong>、<strong>腾讯医典 / Doctorwork</strong>、以及 <strong>AIMIS / 觅影</strong> 等医学影像与辅助诊断平台，可用于糖网筛查、肺癌与食管癌等场景。',
+          '在<strong>2026年3月</strong>，腾讯推出可接入微信的 AI 智能体能力，让用户能直接在微信消息界面中与 AI 交互。'
+        ],
+        lookKeys: ['数字前端','AI 患者互动','AI 智能体工作流','数据授权','系统整合'],
+        lookVals: ['患者是否能在一个应用内完成挂号、支付、咨询、教育、随访管理与导航？','是否支持分诊、FAQ、症状问答、健康教育、提醒与预约导航？','它是真的能跨服务执行任务，还是只是一个聊天机器人？','患者如何授权数据 / 影像在不同服务之间共享？','它与医院核心系统的连接有多深？'],
+        questions: [
+          '<span class="n">1</span>你们如何判断一个医疗旅程适合用 AI 智能体自动化？',
+          '<span class="n">2</span>这个 AI 智能体是否真正接入医院工作流，还是主要停留在患者端？',
+          '<span class="n">3</span>如何避免 AI 给出不安全的医疗建议？',
+          '<span class="n">4</span>临床人员如何审核、覆盖或追踪 AI 的建议？',
+          '<span class="n">5</span>医学影像 AI 上线后，模型表现如何持续监测？',
+          '<span class="n">6</span>当影像 / 报告跨机构共享时，患者同意是如何管理的？',
+          '<span class="n">7</span>AI 在多家医院规模化时，最大的阻力是什么？',
+          '<span class="n">8</span>如果一个医疗体系已经有大型 EMR，腾讯会如何整合而不造成冲击？'
+        ],
+        transP: '<strong>为什么重要：</strong> 腾讯对 NUHS App / MyChart / 数字前端的思路非常有参考价值。新加坡已经有 Epic / MyChart 和较强的治理框架，所以我们不能照搬微信模式，但可以学习腾讯如何做大规模患者触达与服务编排。',
+        transLis: ['AI 支持的肿瘤患者导航','治疗旅程提醒与教育','癌症照护计划数字化互动','AI 辅助的预约与随访引导','结合合规内容的患者 FAQ / 数字礼宾'],
+        takeaway: '新加坡已有 Epic / MyChart 与较强治理，所以不能直接复制微信模式；但我们可以借鉴腾讯如何在规模化场景中设计 AI 支持的导航、教育、提醒、预约触达与患者服务编排。'
+      },
+      {
+        subhead: '坂田基地，龙岗区 &middot; 智慧医院基础设施与 AI 算力',
+        fun: '华为由前解放军工程师<strong>任正非</strong>于<strong>1987年</strong>创立，初始资金只有<strong>2.1万元人民币</strong>。它最早并不是自己造设备，而是从电话交换机代理起家，后来才逐步建立自研能力。如今它已成为全球最大的电信设备厂商之一。',
+        h3s: ['&#128269; 为什么重要','&#128269; 观察重点','&#128172; 可以提问的问题','&#127478;&#127386; 新加坡 / NCIS 借鉴'],
+        why: [
+          '华为对医疗 AI 的价值，更多不在临床模型本身，而在<strong>基础设施层</strong>：云、算力、网络、安全、IoT、指挥中心、智慧园区与数字孪生。',
+          '对智慧医疗来说，关键是<strong>企业底座</strong>：智慧医院基础设施、设备互联、边缘 / 云算力、医院指挥中心、智慧病房、智慧园区与安全架构。',
+          '新加坡面临的 AI 难题，不只是“能不能做模型”，而是：<em>AI 跑在哪里、如何连接、如何被保护、由谁治理、如何规模化？</em>'
+        ],
+        lookKeys: ['AI 算力','智慧医院','网络安全','IoT','数字孪生'],
+        lookVals: ['采用云端、本地机房，还是边缘部署？','是否有指挥中心、床位流转、排队、运输、安全、设施等能力？','身份、访问控制、网络分区、审计日志如何设计？','是否部署传感器、智慧病房、资产追踪、环境监测？','是否可模拟患者流、运营流或园区运行？'],
+        questions: [
+          '<span class="n">1</span>在医疗 AI 场景中，哪些能力应运行在云端、本地或边缘？',
+          '<span class="n">2</span>医院如何建设 AI 基础设施而不形成新的孤岛试点？',
+          '<span class="n">3</span>对于接入 AI 的医院设备，你们如何管理网络安全？',
+          '<span class="n">4</span>智慧医院指挥中心背后的总体架构是什么？',
+          '<span class="n">5</span>IoT、EMR、患者流与运营看板如何整合？',
+          '<span class="n">6</span>目前最成熟、已投产的智慧医院场景有哪些？',
+          '<span class="n">7</span>智慧医院基础设施的 ROI 如何衡量？',
+          '<span class="n">8</span>在像新加坡这样治理较严的医疗环境下，建议从哪里切入？'
+        ],
+        transP: '<strong>为什么重要：</strong> 华为更适合为我们提供“智慧运营底座”的参考，而不是直接患者应用。',
+        transLis: ['医院指挥中心设计','AI 驱动的运营看板','排队、床位、预约、资源流预测','受治理约束下的医疗 AI 基础设施模式','用于低时延 / 高敏感场景的边缘 AI'],
+        takeaway: '对新加坡来说，最值得学的不是单个 AI 功能，而是如何为受治理约束的医疗体系搭建可扩展、可控、可审计的 AI 基础设施。'
+      },
+      {
+        subhead: '平安金融中心，福田区 &middot; 保险 + 健康 + AI 生态',
+        fun: '平安不仅是中国<strong>第一家股份制保险公司</strong>，而且诞生于<strong>蛇口</strong>——一个后来被称为“中国硅谷”的小渔村。它在 1988 年以<strong>4200万元人民币</strong>注册资本起步，如今已是《财富》世界 500 强企业，并用 AI 在贷款评估中综合超过<strong>5000个风险因子</strong>。',
+        h3s: ['&#128269; 为什么重要','&#128269; 观察重点','&#128172; 可以提问的问题','&#127478;&#127386; 新加坡 / NCIS 借鉴'],
+        why: [
+          '平安把<strong>保险、健康服务、在线问诊、健康管理、药房、养老与 AI</strong>连接成一个完整生态。',
+          '平安健康 / 平安好医生覆盖在线问诊、转诊、预约、健康管理与康养服务，更大的生态还包括医院、医生、药房和养老合作网络。',
+          '在 2025 年，平安健康宣布其 AI 模型与医生平台已内置接入<strong>DeepSeek 模型</strong>，用于辅助诊断与个性化健康管理。'
+        ],
+        lookKeys: ['健康生态','风险预测','照护协调','医生平台','患者触达','支付联动'],
+        lookVals: ['保险、照护、药房与在线问诊之间如何打通？','他们如何识别高风险患者？','AI 如何支持随访与纵向照护？','医生在真实工作中如何使用 AI？','如何通过数字化方式推动患者采取行动？','支付 / 保险数据如何反哺健康规划？'],
+        questions: [
+          '<span class="n">1</span>你们如何安全地整合医疗、保险、药房与患者互动数据？',
+          '<span class="n">2</span>最成熟的 AI 场景是什么：风险预测、分诊、照护管理、理赔还是医生辅助？',
+          '<span class="n">3</span>医生使用的 AI 输出如何验证？',
+          '<span class="n">4</span>如何避免临床人员过度依赖 AI 建议？',
+          '<span class="n">5</span>你们如何衡量真正的健康结果改善，而不仅是平台使用量？',
+          '<span class="n">6</span>在肿瘤或慢病领域，最强的场景有哪些？',
+          '<span class="n">7</span>如何在个性化照护与隐私 / 偏差风险之间取得平衡？',
+          '<span class="n">8</span>在如此大的生态里，AI 治理是如何管理的？'
+        ],
+        transP: '<strong>为什么重要：</strong> 对 NCIS 肿瘤人口健康管理来说，平安很可能是最有参考价值的参访点之一。',
+        transLis: ['癌症风险分层','康复期 / 生存者随访','纵向照护管理','患者依从性与数字化提醒','高风险肿瘤患者预测分析','跨医院与社区的 AI 照护协调'],
+        takeaway: '对 NCIS 来说，最有价值的学习点不一定是保险本身，而是平安如何把纵向患者数据、预测分析、数字互动与照护协调整合成一个可规模化运营模式。'
+      },
+      {
+        subhead: '六角大楼总部，坪山区 &middot; 规模、自动化与智能运营',
+        fun: 'BYD 的字面意思就是<strong>“Build Your Dreams（成就梦想）”</strong>。它在 1995 年最早做的是<strong>手机可充电电池</strong>，直到 2003 年才正式进入汽车行业。如今它已成为全球销量领先的电动车企业之一，创始人王传福也常被称作“中国版 Elon Musk”。',
+        h3s: ['&#128269; 为什么重要','&#128269; 观察重点','&#128172; 可以提问的问题','&#127478;&#127386; 新加坡 / NCIS 借鉴'],
+        why: [
+          'BYD 不是医疗公司，但它能展示<strong>大规模智能运营</strong>是如何被真正组织起来的。',
+          'BYD 是高度垂直整合的制造企业，覆盖汽车、电池、电子、半导体与轨道交通，并在深圳拥有重要生产基地。',
+          '在<strong>2026年5月</strong>，BYD 发布了璇玑 A3 自动驾驶芯片，并宣布未来三年在智能技术研发上投入超过千亿元人民币。'
+        ],
+        lookKeys: ['自动化','预测性维护','指挥中心','数据反馈闭环','规模化纪律','人机协同'],
+        lookVals: ['机器人、产线与自动物流是如何组织的？','他们如何预防停机？','是否有实时运营监控中心？','数据如何反向提升质量？','多地点之间如何标准化？','一线人员如何与自动化配合工作？'],
+        questions: [
+          '<span class="n">1</span>你们如何判断应优先自动化哪个流程？',
+          '<span class="n">2</span>自动化 ROI 是如何衡量的？',
+          '<span class="n">3</span>你们如何实时监控运营质量？',
+          '<span class="n">4</span>AI 如何用于预测性维护或物流调度？',
+          '<span class="n">5</span>在多个基地规模化推广自动化时，如何避免失控？',
+          '<span class="n">6</span>在 AI / 自动化进入生产前，有哪些治理机制？',
+          '<span class="n">7</span>一线员工如何适应自动化？',
+          '<span class="n">8</span>制造业自动化的哪些经验可以迁移到医院运营？'
+        ],
+        transP: '<strong>为什么重要：</strong> BYD 对医院运营有参考价值，因为医院同样存在复杂且高频的流转体系。',
+        transLis: ['患者流','预约流','标本流','药物流','床位 / 资源流','运输 / 后勤','设备 / 资产','排队与产能管理'],
+        takeaway: '医疗可以向 BYD 学习，不是因为医院等于工厂，而是两者都需要可靠运营、实时可视化、标准化、自动化、异常处理与持续改进。'
+      },
+      {
+        subhead: '光明科学城 &middot; AI + 生物医学研究 + 转化医学',
+        fun: '深圳湾实验室虽然只是<strong>2019年</strong>才成立，却已由世界知名结构生物学家<strong>颜宁</strong>领衔。她在 2022 年离开普林斯顿大学的终身教职职位，回到深圳带领该实验室发展。SZBL 也是大湾区打造全球科研高地的重要布局之一。',
+        h3s: ['&#128269; 为什么重要','&#128269; 观察重点','&#128172; 可以提问的问题','&#127478;&#127386; 新加坡 / NCIS 借鉴'],
+        why: [
+          'SZBL 与<strong>AI + 生物医学研究 + 转化医学</strong>高度相关。',
+          '它是国家级生物医学创新平台，聚焦 AI、基因组学、计算生物学、转化医学、多组学整合、计算肿瘤学，以及医院-学术-产业协同。',
+          '实验室于 2019 年启动，深圳市政府五年预算约 20 亿美元，是<strong>光明科学城</strong>科研布局的一部分，并与 SMART 等机构相邻。'
+        ],
+        lookKeys: ['AI + 组学','肿瘤学','转化模式','数据治理','产业链接','评估验证'],
+        lookVals: ['基因组、多组学与计算生物学如何结合？','在计算肿瘤学、肿瘤生物学与精准医学方面有哪些能力？','科研成果如何真正进入医院？','科研数据访问与保护如何平衡？','高校、医院与产业如何协同？','AI 在进入临床前如何完成验证？'],
+        questions: [
+          '<span class="n">1</span>你们如何选择真正具有临床价值的生物医学 AI 项目？',
+          '<span class="n">2</span>多组学数据如何与临床数据联动？',
+          '<span class="n">3</span>当前肿瘤领域最成熟的 AI 场景有哪些？',
+          '<span class="n">4</span>医院如何参与转化型 AI 研究？',
+          '<span class="n">5</span>在数据治理与患者同意方面，你们如何处理？',
+          '<span class="n">6</span>如何从科研模型走到临床工作流？',
+          '<span class="n">7</span>AI 在影响患者照护前，需要经过哪些验证？',
+          '<span class="n">8</span>与新加坡 / NCIS 之间，哪些跨境合作最现实？'
+        ],
+        transP: '<strong>为什么重要：</strong> 这个参访点与 NCIS 高度相关。',
+        transLis: ['计算肿瘤学','癌症风险分层','基因组 + 临床数据分析','转化型 AI 研究','AI 支持的临床试验匹配','纵向肿瘤结局分析','科研到医疗落地模式'],
+        takeaway: '对 NCIS 来说，最重要的学习点是深圳如何把科研、医院数据、产业平台与实施路径真正连起来，让 AI 不只停留在论文里，而能变成真实肿瘤照护中的有用能力。'
+      },
+      {
+        subhead: '罗湖区主院区 &middot; 现代深圳最早的医院（始建于1946年）',
+        fun: '深圳市人民医院最早只是<strong>1946 年成立的宝安县卫生院</strong>，后来在 1994 年成为<strong>深圳首家三级甲等医院</strong>。如今它是深圳最大的现代化医院之一，拥有<strong>16 个省级重点临床学科</strong>，在心血管、呼吸与整形等领域长期名列前茅。',
+        h3s: ['&#128269; 为什么重要','&#128269; 观察重点','&#128172; 可以提问的问题','&#127478;&#127386; 新加坡 / NCIS 借鉴'],
+        why: [
+          '这可能是最贴近医疗真实场景的一站 —— 可以检验前面看到的平台 / 厂商概念，是否真的能在医院里运行。',
+          '它是深圳主要的三级医院之一，也是<strong>现代深圳最早的医院</strong>：国家三级甲等，1946 年建院，多院区，开放床位超过 3000 张。',
+          '医院现有四个院区：留医（主院区）、第一门诊部、龙华分院、坂田院区，并与南科大（2018）和暨南大学有关联。'
+        ],
+        lookKeys: ['一线工作流','患者旅程','指挥中心','AI 安全','采用情况','系统整合'],
+        lookVals: ['医生和护士是否真的在使用 AI？','挂号、排队、支付、预约、出院、随访流程如何被支持？','是否能看到床位流、急诊流、门诊产能与升级机制？','AI 输出是如何被检查的？','临床人员喜欢 / 不喜欢什么？','AI 如何接入 HIS / EMR / PACS / LIS？'],
+        questions: [
+          '<span class="n">1</span>哪些 AI 场景已经在日常运营中真正上线？',
+          '<span class="n">2</span>哪些 AI 场景失败了或无法规模化？原因是什么？',
+          '<span class="n">3</span>医生和护士如何被培训来使用 AI？',
+          '<span class="n">4</span>如何管理 AI 告警，避免告警疲劳？',
+          '<span class="n">5</span>AI 是否嵌入 EMR 工作流，还是独立访问？',
+          '<span class="n">6</span>你们如何衡量收益：等候时间、住院日、效率、质量、满意度？',
+          '<span class="n">7</span>AI 进入临床前，治理流程是什么？',
+          '<span class="n">8</span>AI 上线后由谁负责：IT、临床科室、运营、供应商还是医院管理层？'
+        ],
+        transP: '<strong>为什么重要：</strong> 这里能把 Epic / Synapxe 这个问题真正落到地上。',
+        transLis: ['在新加坡，AI 必须适配 Epic + 国家级 IT 治理 + 网络安全 + 企业审批','如何在不引入不安全独立工具的前提下，把 AI 放进真实医院工作流','这些经验可用于 GMIO GROSS 演进与试点后的规模化'],
+        takeaway: '在新加坡，我们的挑战是 AI 必须适配高度治理的 Epic 环境、国家 IT 治理、网络安全控制与企业审批流程。基于他们的经验，怎样才能在不制造不安全独立工具的前提下，把 AI 引入真实医院工作流？'
+      }
+    ],
+    sections: {
+      mustAsk: {
+        h2: '&#128204; 所有参访点都必须追问的问题',
+        p: '把这些问题记在笔记本里，到每个地点都重复使用。',
+        h3s: ['A. 如何从试点走向规模化','B. 系统整合','C. 治理机制','D. 采用与变革','E. 数据','F. 对新加坡的适用性'],
+        lis: [
+          '第一个真正规模化成功的 AI 场景是什么？','它为什么能规模化：技术、领导力、工作流、资金，还是治理？','有多少 AI 试点没能规模化？最常见原因是什么？',
+          'AI 是嵌入核心临床系统里，还是一个独立平台？','你们如何把 AI 接入 EMR / HIS / PACS / LIS / CRM / 预约系统？','如何避免再造一个数据孤岛？',
+          '谁来批准临床 AI 的使用？','上线前如何验证准确性？','上线后如何监控表现？','如果 AI 给出错误建议，会发生什么？',
+          '如何让临床人员愿意信任 AI？','AI 在工作流中是可选、推荐，还是强制？','如何管理告警疲劳或过度依赖？',
+          'AI 要发挥作用，需要什么数据？','如何处理不完整、不一致或非结构化数据？','患者同意与数据共享如何管理？',
+          '如果一个医疗系统受到大型 EMR 合约与中央 IT 治理约束，你会建议什么 AI 落地模式？','在不冲击企业系统的前提下，第一步最安全的做法是什么？','哪些事情不应过早尝试？','哪些能力必须内部建设，而不能完全依赖供应商？'
+        ]
+      },
+      positioning: {
+        h2: '&#127908; 你的个人定位说法',
+        p: '做自我介绍时，可以用这句更有力的 framing：',
+        body: '“我来自 NUHS GMIO，主要支持门诊、日间服务、MyChart / NUHS App，以及与 Epic 相关的数字化转型工作。我目前特别关注 AI 如何安全地嵌入医疗工作流，尤其是在企业级 EMR 与受治理的 IT 环境下。这次行程中，我希望了解深圳机构如何把 AI 从概念推进为可规模化的生产场景，以及其中哪些经验可以被新加坡在 Epic 和 Synapxe 治理环境下借鉴。”'
+      },
+      attention: {
+        h2: '&#128221; 行程中要特别留意什么',
+        p: '不要只记录“他们有什么 AI”，而要重点记录以下五件事：',
+        ths: ['记录什么','为什么重要'],
+        tds: ['应用场景','AI 解决的核心问题是什么？','工作流','它具体嵌在用户旅程的哪个位置？','系统整合','它连接了哪些系统 / 数据？','治理机制','谁批准、监控并负责它？','结果成效','带来了什么可量化收益？']
+      },
+      report: {
+        h2: '&#128202; 建议的返程后汇报结构',
+        lis: [
+          '<strong>执行摘要</strong> - 关键学习点、哪些与 NCIS / NUHS 相关、哪些不适合直接迁移',
+          '<strong>按机构的观察</strong> - Tencent、Huawei、Ping An、BYD、SZBL、Shenzhen People\'s Hospital',
+          '<strong>关键主题</strong> - AI 要规模化必须嵌入工作流；数据 / 平台成熟度胜过模型噱头；治理必须尽早设计；AI 必须解决真实运营痛点，而不只是展示给领导看；新加坡必须借鉴而不是照搬',
+          '<strong>新加坡 / NCIS 适用性</strong> - 哪些可在 Epic / MyChart 中推进，哪些需要 Synapxe 治理，哪些可先做 sandbox，哪些需要企业架构批准',
+          '<strong>建议的后续行动</strong> - 强化 GMIO GROSS / Epic PCR AI Agent；识别 2-3 个 NCIS 肿瘤 AI 用例；探索 AI 患者导航与智慧运营看板；尽早与 Synapxe 启动治理讨论'
+        ]
+      },
+      top5: {
+        h2: '&#127775; 这次行程最值得争取带回来的五个结论',
+        lis: [
+          '深圳是如何筛选出值得规模化的 AI 场景',
+          'AI 如何被嵌入工作流，而不是游离在系统之外',
+          '他们如何治理 AI 安全、网络安全、隐私与临床责任',
+          '上线后如何衡量结果与 ROI',
+          '新加坡如何在 Epic 合约与 Synapxe 治理约束下借鉴这种模式'
+        ]
+      }
+    },
+    footer: '<strong>NCIS 深圳 AI 学习考察 - 行前预读</strong><br>Prepared 18 Jun 2026 &middot; 供 Marissa 与 Jane 内部参考分享<br>建筑图片来源：Wikimedia Commons（CC BY-SA 4.0）、Asia Times、EyeShenzhen.com、Auto&amp;Design Magazine、SZBL 官方渠道<br>公司标志来源：Wikimedia Commons（Public Domain / CC BY-SA 4.0）<br>文字徽章：为深圳湾实验室与深圳市人民医院自制'
+  };
+
+  function setLang(lang){
+    if (lang !== 'zh' && lang !== 'en') lang = 'en';
+    localStorage.setItem(STORAGE_KEY, lang);
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    qa('#langToggle button').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+    if (lang === 'en') { restoreEnglish(); return; }
+
+    document.title = zh.title;
+    heroTitle.innerHTML = zh.heroTitle;
+    heroSubtitle.innerHTML = zh.heroSubtitle;
+    zh.heroChipLabels.forEach((t,i)=> heroChipLabels[i].innerHTML = t);
+    zh.heroChipValues.forEach((t,i)=> heroChipValues[i].innerHTML = t);
+    summaryH2.innerHTML = zh.summaryH2;
+    mission.innerHTML = zh.mission;
+    zh.summaryH3s.forEach((t,i)=> summaryH3s[i].innerHTML = t);
+    zh.visitWhats.forEach((t,i)=> visitWhats[i].innerHTML = t);
+    zh.top3.forEach((t,i)=> top3Texts[i].innerHTML = t);
+
+    cards.forEach((card, i) => {
+      const z = zh.cards[i];
+      card.subhead.innerHTML = z.subhead;
+      card.funLabel.innerHTML = '趣闻';
+      card.funText.innerHTML = z.fun;
+      card.readMore.innerHTML = '了解更多';
+      z.h3s.slice(0, card.h3s.length).forEach((t,j)=> card.h3s[j].innerHTML = t);
+      z.why.slice(0, card.whyList.length).forEach((t,j)=> card.whyList[j].innerHTML = t);
+      z.lookKeys.slice(0, card.lookKeys.length).forEach((t,j)=> card.lookKeys[j].innerHTML = t);
+      z.lookVals.slice(0, card.lookVals.length).forEach((t,j)=> card.lookVals[j].innerHTML = t);
+      z.questions.slice(0, card.questions.length).forEach((t,j)=> card.questions[j].innerHTML = t);
+      card.transH3.innerHTML = '&#127478;&#127386; 新加坡 / NCIS 借鉴';
+      card.transP.innerHTML = z.transP;
+      z.transLis.forEach((t,j)=> card.transLis[j].innerHTML = t);
+      card.takeaway.innerHTML = z.takeaway;
+    });
+
+    // Section 1: Must-ask
+    sections[0].h2.innerHTML = zh.sections.mustAsk.h2;
+    sections[0].p.innerHTML = zh.sections.mustAsk.p;
+    zh.sections.mustAsk.h3s.forEach((t,i)=> sections[0].h3s[i].innerHTML = t);
+    zh.sections.mustAsk.lis.forEach((t,i)=> sections[0].olLis[i].innerHTML = t);
+
+    // Section 2: Positioning
+    sections[1].h2.innerHTML = zh.sections.positioning.h2;
+    sections[1].p.innerHTML = zh.sections.positioning.p;
+    sections[1].pos.innerHTML = zh.sections.positioning.body;
+
+    // Section 3: Attention table
+    sections[2].h2.innerHTML = zh.sections.attention.h2;
+    sections[2].p.innerHTML = zh.sections.attention.p;
+    zh.sections.attention.ths.forEach((t,i)=> sections[2].ths[i].innerHTML = t);
+    zh.sections.attention.tds.forEach((t,i)=> sections[2].tds[i].innerHTML = t);
+
+    // Section 4: Report structure
+    sections[3].h2.innerHTML = zh.sections.report.h2;
+    zh.sections.report.lis.forEach((t,i)=> sections[3].olLis[i].innerHTML = t);
+
+    // Section 5: Top 5
+    sections[4].h2.innerHTML = zh.sections.top5.h2;
+    zh.sections.top5.lis.forEach((t,i)=> sections[4].olLis[i].innerHTML = t);
+
+    footer.innerHTML = zh.footer;
+  }
+
+  qa('#langToggle button').forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
+  const urlLang = new URLSearchParams(location.search).get('lang') || (location.hash === '#zh' ? 'zh' : location.hash === '#en' ? 'en' : '');
+  const initialLang = (urlLang === 'zh' || urlLang === 'en') ? urlLang : (localStorage.getItem(STORAGE_KEY) || 'en');
+  setLang(initialLang);
+})();
+</script>
+
 </body>
 </html>
