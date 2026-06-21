@@ -57,6 +57,15 @@ body{font-family:-apple-system,"Segoe UI","Helvetica Neue",Arial,"PingFang SC","
 .translation-box li{padding-left:18px;position:relative;margin-bottom:6px;font-size:14px}
 .translation-box li::before{content:'\2192';position:absolute;left:0;color:#C2185B;font-weight:700}
 .translation-box .takeaway{margin-top:14px;padding-top:14px;border-top:1px dashed #FF6B9D;font-style:italic;font-size:14px}
+.fun-fact{background:linear-gradient(135deg,#FFF9E6 0%,#FFE8F5 100%);border-left:4px solid #FFB800;padding:16px 20px 16px 22px;border-radius:0 14px 14px 0;margin-top:18px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 2px 10px rgba(255,184,0,.08)}
+.fun-fact .icon{flex-shrink:0;width:38px;height:38px;background:linear-gradient(135deg,#FFD93D 0%,#FFB800 100%);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 3px 8px rgba(255,184,0,.35)}
+.fun-fact .content{flex:1;min-width:0}
+.fun-fact .label{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;color:#B8860B;margin-bottom:4px}
+.fun-fact .text{font-size:14px;line-height:1.65;color:#3D2914}
+.fun-fact .text strong{color:#0B2545}
+.fun-fact .readmore{display:inline-block;margin-top:8px;font-size:12px;font-weight:600;color:var(--accent,#1E5AFF);text-decoration:none;letter-spacing:.2px;float:right}
+.fun-fact .readmore:hover{text-decoration:underline}
+.fun-fact .readmore::after{content:"\00a0\2192"}
 .section{background:white;border-radius:24px;padding:32px 40px;margin-bottom:30px;box-shadow:0 4px 20px rgba(0,0,0,.06);border:1px solid #EAEEF6}
 .section h2{font-size:24px;margin-bottom:16px;color:#0B2545;display:flex;align-items:center;gap:12px}
 .section h3{font-size:15px;text-transform:uppercase;letter-spacing:1px;color:#4A5568;margin:18px 0 8px;border-bottom:2px solid #EAEEF6;padding-bottom:6px}
@@ -97,6 +106,10 @@ body{-webkit-text-size-adjust:100%}
   .look-grid{grid-template-columns:1fr;gap:6px;font-size:13px}
   .questions{grid-template-columns:1fr;gap:8px}
   .questions .q{font-size:12.5px;padding:8px 12px}
+  .fun-fact{padding:14px 14px 14px 16px;gap:12px;margin-top:14px;border-radius:0 12px 12px 0}
+  .fun-fact .icon{width:34px;height:34px;font-size:18px;border-radius:9px}
+  .fun-fact .text{font-size:13px}
+  .fun-fact .readmore{font-size:11px;margin-top:6px}
   .translation-box{padding:14px 16px;margin-top:16px;border-radius:0 10px 10px 0}
   .section{padding:24px 20px;border-radius:18px;margin-bottom:20px}
   .section h2{font-size:18px;gap:10px}
@@ -171,6 +184,14 @@ body{-webkit-text-size-adjust:100%}
     </div>
   </div>
   <div class="body">
+    <div class="fun-fact">
+      <div class="icon">&#9889;</div>
+      <div class="content">
+        <div class="label">Fun fact</div>
+        <div class="text">The "<strong>Ten</strong>" in Tencent comes from <strong>"Teng" (&#64013;)</strong> &mdash; the same character in founder Ma Huateng's name, which also means "to soar." His very first pot of gold came from building a hardware dongle that displayed real-time stock prices on computers. Tencent now handles over <strong>1 billion WeChat Pay transactions per day</strong> &mdash; more than Visa and Mastercard combined.</div>
+        <a class="readmore" href="https://www.ourchinastory.com/en/13376/China's-Tencent-was-founded-in-Shenzhen" target="_blank" rel="noopener noreferrer">Read more</a>
+      </div>
+    </div>
     <h3>&#128269; Why it matters</h3>
     <ul class="why-list">
       <li>Tencent's healthcare power comes from its <strong>ecosystem</strong>: WeChat, mini-programs, payments, cloud, AI, digital identity, patient engagement, and medical AI tools.</li>
@@ -223,6 +244,14 @@ body{-webkit-text-size-adjust:100%}
     </div>
   </div>
   <div class="body">
+    <div class="fun-fact">
+      <div class="icon">&#9889;</div>
+      <div class="content">
+        <div class="label">Fun fact</div>
+        <div class="text">Founded in <strong>1987</strong> by ex-PLA engineer <strong>Ren Zhengfei</strong> with just <strong>CNY 21,000</strong> (about USD 3,000 today). It started as a reseller of telephone switches, then built its own. Ren is still CEO at 81, and Huawei has grown into the <strong>world's largest telecom equipment maker</strong> &mdash; bigger than Ericsson and Nokia combined.</div>
+        <a class="readmore" href="https://en.wikipedia.org/wiki/Ren_Zhengfei" target="_blank" rel="noopener noreferrer">Read more</a>
+      </div>
+    </div>
     <h3>&#128269; Why it matters</h3>
     <ul class="why-list">
       <li>Huawei matters less for clinical AI and more for <strong>infrastructure AI</strong>: cloud, AI compute, networking, cybersecurity, IoT, command centres, smart campus, digital twin.</li>
@@ -276,6 +305,14 @@ body{-webkit-text-size-adjust:100%}
     </div>
   </div>
   <div class="body">
+    <div class="fun-fact">
+      <div class="icon">&#9889;</div>
+      <div class="content">
+        <div class="label">Fun fact</div>
+        <div class="text">Ping An wasn't just China's <strong>first joint-stock insurance company</strong> &mdash; it was founded in <strong>Shekou</strong>, a tiny fishing village that later became known as "China's Silicon Valley." Started in 1988 with just <strong>42 million CNY</strong> (~USD 6 million) registered capital, and is now a Fortune Global 500 company. They use AI to assess loans with over <strong>5,000 risk factors</strong>.</div>
+        <a class="readmore" href="https://group.pingan.com/about_us/history.html" target="_blank" rel="noopener noreferrer">Read more</a>
+      </div>
+    </div>
     <h3>&#128269; Why it matters</h3>
     <ul class="why-list">
       <li>Ping An connects <strong>insurance, health services, online consultation, health management, pharmacies, senior care, and AI</strong> into one ecosystem.</li>
@@ -330,6 +367,14 @@ body{-webkit-text-size-adjust:100%}
     </div>
   </div>
   <div class="body">
+    <div class="fun-fact">
+      <div class="icon">&#9889;</div>
+      <div class="content">
+        <div class="label">Fun fact</div>
+        <div class="text">BYD literally stands for <strong>"Build Your Dreams"</strong>. It started in 1995 making <strong>rechargeable batteries for mobile phones</strong> &mdash; and only entered the car business in 2003. Today it's the world's biggest EV maker by volume, and in some months sells more EVs than Tesla, GM, and Ford combined. Founder Wang Chuanfu is nicknamed "the Chinese Elon Musk."</div>
+        <a class="readmore" href="https://www.byd.com/eu/about-byd" target="_blank" rel="noopener noreferrer">Read more</a>
+      </div>
+    </div>
     <h3>&#128269; Why it matters</h3>
     <ul class="why-list">
       <li>BYD is not a healthcare company - but it shows <strong>large-scale intelligent operations</strong>.</li>
@@ -386,6 +431,14 @@ body{-webkit-text-size-adjust:100%}
     </div>
   </div>
   <div class="body">
+    <div class="fun-fact">
+      <div class="icon">&#9889;</div>
+      <div class="content">
+        <div class="label">Fun fact</div>
+        <div class="text">Founded in just <strong>2019</strong>, but already headed by world-renowned structural biologist <strong>Yan Nieng</strong> &mdash; she left her tenured Princeton professorship in 2022 to come back to Shenzhen and lead this lab. SZBL is part of China's "Greater Bay Area" plan to make Guangdong-Hong Kong-Macau the next global science hub.</div>
+        <a class="readmore" href="https://en.szbl.ac.cn/about-us.htm" target="_blank" rel="noopener noreferrer">Read more</a>
+      </div>
+    </div>
     <h3>&#128269; Why it matters</h3>
     <ul class="why-list">
       <li>SZBL is relevant to <strong>AI + biomedical research + translational medicine</strong>.</li>
@@ -441,6 +494,14 @@ body{-webkit-text-size-adjust:100%}
     </div>
   </div>
   <div class="body">
+    <div class="fun-fact">
+      <div class="icon">&#9889;</div>
+      <div class="content">
+        <div class="label">Fun fact</div>
+        <div class="text">Originally a humble <strong>Bao'an County health center founded in 1946</strong>, it became the <strong>first Grade 3A hospital in Shenzhen</strong> in 1994. Today it's the largest modern hospital in the city, with <strong>16 provincial key clinical disciplines</strong> and ranked #1 in Shenzhen for cardiology, respiratory diseases, and plastic surgery.</div>
+        <a class="readmore" href="https://www.szhospital.com/enmobile?fid=A002" target="_blank" rel="noopener noreferrer">Read more</a>
+      </div>
+    </div>
     <h3>&#128269; Why it matters</h3>
     <ul class="why-list">
       <li>Probably the most important healthcare-grounded visit - let us see whether vendor/platform concepts actually work in a hospital.</li>
