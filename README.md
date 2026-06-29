@@ -15,6 +15,7 @@ The pre-read is a single self-contained HTML page — just open `index.html` in 
 <!-- AUTO-LIST-START -->
 ## Files
 
+- [index-v2.html](https://yonghuatrc.github.io/ncis-shenzhen-trip-prep/index-v2.html)
 - [index.html](https://yonghuatrc.github.io/ncis-shenzhen-trip-prep/index.html)
 
 <!-- AUTO-LIST-END -->
