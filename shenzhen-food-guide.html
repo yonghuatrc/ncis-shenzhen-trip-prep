@@ -133,21 +133,18 @@ footer {
 }
 footer a { color: rgba(255,255,255,.7); }
 
-#lang-toggle {
-  position: fixed; bottom: 24px; right: 24px; z-index: 9999;
-  width: 48px; height: 48px; border-radius: 50%;
-  background: linear-gradient(135deg, #ff6b35, #ff8f00);
-  color: #fff; font-size: .8rem; font-weight: 700; cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 12px rgba(255,107,53,.4);
-  transition: transform .2s, box-shadow .2s;
-  user-select: none;
-}
-#lang-toggle:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(255,107,53,.5); }
+.lang-toggle{position:fixed;top:18px;right:18px;z-index:9999;display:inline-flex;background:white;border-radius:30px;padding:4px;box-shadow:0 4px 18px rgba(0,0,0,.18);border:1px solid #EAEEF6;font-size:13px;font-weight:600;user-select:none}
+.lang-toggle button{border:none;background:transparent;padding:7px 14px;border-radius:26px;cursor:pointer;color:#4A5568;font-weight:600;font-size:13px;transition:all .2s;letter-spacing:.5px}
+.lang-toggle button.active{background:linear-gradient(135deg,#ff6b35,#ff8f00);color:white;box-shadow:0 2px 8px rgba(255,107,53,.4)}
+.lang-toggle button:hover:not(.active){background:#F8FAFC;color:#0B2545}
+
+@media(max-width:600px){.lang-toggle{top:56px;right:12px;font-size:12px}.lang-toggle button{padding:6px 10px;font-size:12px}}
 
 .goog-te-banner-frame { display: none !important; }
 body { top: 0 !important; }
 .skiptranslate { display: none !important; }
+.goog-te-gadget { display: none !important; }
+.goog-te-gadget-simple { display: none !important; }
 
 @media (max-width: 768px) {
   .hero h1 { font-size: 2rem; }
@@ -879,8 +876,9 @@ document.querySelectorAll('.card').forEach(function(card) {
 </script>
 
 <div id="google_translate_element" style="display:none"></div>
-<div id="lang-toggle" onclick="toggleTranslation()">
-  <span id="lang-label">EN</span>
+<div class="lang-toggle notranslate" id="langToggle" translate="no">
+  <button type="button" data-lang="zh" class="active">简体</button>
+  <button type="button" data-lang="en">EN</button>
 </div>
 
 <script>
@@ -892,24 +890,36 @@ function googleTranslateElementInit() {
   }, 'google_translate_element');
 }
 
-function toggleTranslation() {
-  var label = document.getElementById('lang-label');
-  if (label.textContent === 'EN') {
+function setLang(lang) {
+  if (lang !== 'zh' && lang !== 'en') lang = 'zh';
+  localStorage.setItem('shenzhen-food-guide-lang', lang);
+  document.querySelectorAll('#langToggle button').forEach(function(btn) {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  if (lang === 'zh') {
+    document.cookie = 'googtrans=;path=/;max-age=0';
+    location.reload();
+    return;
+  }
+  var maxWait = 50, waited = 0;
+  (function poll() {
     var select = document.querySelector('.goog-te-combo');
     if (select) {
       select.value = 'en';
       select.dispatchEvent(new Event('change'));
-      label.textContent = '中';
+    } else if (waited++ < maxWait) {
+      setTimeout(poll, 100);
     }
-  } else {
-    var select = document.querySelector('.goog-te-combo');
-    if (select) {
-      select.value = 'zh-CN';
-      select.dispatchEvent(new Event('change'));
-      label.textContent = 'EN';
-    }
-  }
+  })();
 }
+// Event listeners
+document.querySelectorAll('#langToggle button').forEach(function(btn) {
+  btn.addEventListener('click', function() { setLang(btn.dataset.lang); });
+});
+// Restore saved language
+var saved = localStorage.getItem('shenzhen-food-guide-lang');
+if (saved && saved !== 'zh') { setLang('en'); }
 </script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
