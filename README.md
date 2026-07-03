@@ -17,6 +17,7 @@ The pre-read is a single self-contained HTML page — just open `index.html` in 
 
 - [index-for-sharing.html](https://yonghuatrc.github.io/ncis-shenzhen-trip-prep/index-for-sharing.html)
 - [index-v2.html](https://yonghuatrc.github.io/ncis-shenzhen-trip-prep/index-v2.html)
+- [index-v3.html](https://yonghuatrc.github.io/ncis-shenzhen-trip-prep/index-v3.html)
 - [index.html](https://yonghuatrc.github.io/ncis-shenzhen-trip-prep/index.html)
 - [shenzhen-food-guide.html](https://yonghuatrc.github.io/ncis-shenzhen-trip-prep/shenzhen-food-guide.html)
 
