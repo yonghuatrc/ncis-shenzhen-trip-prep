@@ -28,7 +28,11 @@ The pre-read is a single self-contained HTML page — just open `index.html` in 
 The canonical source lives at:
 `C:\Users\User\Dropbox\01. Work\NUHS\NCIS-Study-Trip\`
 
-Edits to the HTML should be made there, then re-deployed to this repo (overwrite `index.html` and push).
+## Editing workflow
+
+1. Edit `index-v3.html` (test locally, verify toggle).
+2. After approval, copy `index-v3.html` to `index.html` (root page) and push.
+3. `index-for-sharing.html` is `index-v3.html` minus Personal Positioning section.
 
 ## Lifetime
 
