@@ -1,0 +1,62 @@
+{
+  "shenzhen-airport.webp": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Shenzhen_Bao%27an_Airport.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Shenzhen_Bao%27an_Airport.jpg/1280px-Shenzhen_Bao%27an_Airport.jpg",
+    "credit": "Wikimedia Commons · CC BY 2.0 · Forgemind ArchiMedia"
+  },
+  "mixc-world.webp": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Huarun_Wanxiang_World_in_Nanshan2021.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Huarun_Wanxiang_World_in_Nanshan2021.jpg/1280px-Huarun_Wanxiang_World_in_Nanshan2021.jpg",
+    "credit": "Wikimedia Commons · MixC World Shenzhen"
+  },
+  "seg-electronics-market.webp": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:SEG_Plaza_in_Shenzhen2021.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/SEG_Plaza_in_Shenzhen2021.jpg",
+    "credit": "Wikimedia Commons · SEG Plaza Shenzhen"
+  },
+  "huaqiangbei-museum.webp": {
+    "source_url": "https://www.szft.gov.cn/en/life/cultural/mseums/content/post_8557812.html",
+    "image_url": "https://www.szft.gov.cn/img/0/182/182334/8557812.jpg",
+    "credit": "Futian Government / Shenzhen Daily · HQB Museum entrance"
+  },
+  "xpeng-x2.webp": {
+    "source_url": "https://www.xiaopeng.com/news/company_news/4081.html",
+    "image_url": "https://xps01.xiaopeng.com/cms/material/pic/2021/09-24/pic_20210924100057_78468.jpg",
+    "credit": "XPeng official · Voyager X2 reference"
+  },
+  "hixbot-robot-band.webp": {
+    "source_url": "https://news.qq.com/rain/a/20260413A07TEI00",
+    "image_url": "https://inews.gtimg.com/om_bt/Om-toc1r_cHSmYgsL8Gx6Htc2ruZwBhqkQ2SWTQVjaqsIAA/641",
+    "credit": "Nanfang Metropolis Daily via Tencent News · HIXBOT robot band"
+  },
+  "shekou-market.webp": {
+    "source_url": "https://hk.trip.com/moments/poi-shekou-market-18178827",
+    "image_url": "https://ak-d.tripcdn.com/images/1mi0f12000jc7x316330D_Q90.jpg?proc=source/trip",
+    "credit": "Trip.com traveller photo · Shekou Market"
+  },
+  "gangxia-escalator.webp": {
+    "source_url": "user-provided local file: 岗厦卓悦中心灯光扶梯.jpeg",
+    "image_url": "岗厦卓悦中心灯光扶梯.jpeg",
+    "credit": "Boss-provided · Gangxia / One Avenue"
+  },
+  "futian-3d-screen.webp": {
+    "source_url": "https://www.wenweipo.com/a/202105/21/AP60a77f41e4b0a46dabe9b30d.html",
+    "image_url": "https://dw-media.wenweipo.com/dams/share/image/202105/21/60a77f41e4b0903c0e8b65081.jpg",
+    "credit": "Hong Kong Wen Wei Po · Futian naked-eye 3D screen"
+  },
+  "baoan-qianli.webp": {
+    "source_url": "https://www.ulifestyle.com.hk/spot/detail/20072154/%E5%AF%B6%E5%AE%89%E5%A4%A7%E4%BB%9F%E9%87%8C",
+    "image_url": "https://resource02.ulifestyle.com.hk/place/coverthumb/687611d4b6c18.webp",
+    "credit": "U Lifestyle · Bao’an Qianli shopping centre"
+  },
+  "one-avenue.webp": {
+    "source_url": "https://www.mtr.com.hk/archive/ch/services/ShenZhen/2_Shenzhen_attractions_One_Avenue_C.pdf",
+    "image_url": "embedded photo 2 extracted from official MTR guide PDF",
+    "credit": "MTR Shenzhen attractions guide · One Avenue 卓悦中心"
+  },
+  "tencent-binhai.webp": {
+    "source_url": "user-provided local file: tencent-binhai.png",
+    "image_url": "tencent-binhai.png",
+    "credit": "Boss-provided · Tencent Binhai HQ"
+  }
+}

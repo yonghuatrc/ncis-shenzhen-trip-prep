@@ -1,0 +1,281 @@
+{
+  "apollo-go.webp": {
+    "source_file": "apollo-go.jpg",
+    "source_sha256": "36a8e78dedf75ecf8656bbac6156d1cc5c0ea212aad7b377218639a9ede5f34c",
+    "output_sha256": "54aa8cdfb42d0d5aa24117f66945501a0f3b4608ec57d56fef09fc06efa888ef",
+    "dimensions": [
+      500,
+      333
+    ],
+    "bytes": 20188
+  },
+  "baoan-qianli.webp": {
+    "source_file": "baoan-qianli.webp",
+    "source_sha256": "b4b1aa51463fd44cd2a0573b87197de1e3cc4387c325201e42e0604b89aadf10",
+    "output_sha256": "92e88c0108d7df3073f69384fec436fed468af5892a697c279a925b786f5140f",
+    "dimensions": [
+      400,
+      400
+    ],
+    "bytes": 26630
+  },
+  "chiwan-tianhou-temple.webp": {
+    "source_file": "chiwan-tianhou-temple.jpg",
+    "source_sha256": "7ea2ee9f00484b5b21e0bbf6f640b04a0f5854ce8b08cf31392091a5a82a5f45",
+    "output_sha256": "56a06f25f134e264b4b469843511a19327a8cf516c3638d7314c579a45ea648b",
+    "dimensions": [
+      1600,
+      951
+    ],
+    "bytes": 272448
+  },
+  "futian-3d-screen.webp": {
+    "source_file": "futian-3d-screen.jpg",
+    "source_sha256": "c1cc841e8e53d3402aba324400505dc6d68332c18582095df7c55a8ee8789d2d",
+    "output_sha256": "027eb403999fb38704fad30fef2c16db0e81d418fe3de3262bb3b4f2125dfc6a",
+    "dimensions": [
+      1600,
+      876
+    ],
+    "bytes": 162742
+  },
+  "gangxia-escalator.webp": {
+    "source_file": "岗厦卓悦中心灯光扶梯.jpeg",
+    "source_sha256": "de1cb5105be300f813176a684e73b2803aabdfa0a85390f953d6005755037e58",
+    "output_sha256": "2b87541ecd40904c2525b26051325b6229c7c8200665d927ca9d9469ce7a2dab",
+    "dimensions": [
+      387,
+      516
+    ],
+    "bytes": 56848
+  },
+  "guangming-life-science-park.webp": {
+    "source_file": "guangming-life-science-park.jpg",
+    "source_sha256": "930e81fe6b94410862bd8e666fd64de3da58daf1f95fd5819371b64c320b12b6",
+    "output_sha256": "8fc1bb46c912139d8509a3e9cab0c4a6cf623062de8c81d311ec7fc752440e88",
+    "dimensions": [
+      1333,
+      563
+    ],
+    "bytes": 106722
+  },
+  "happy-harbor.webp": {
+    "source_file": "happy-harbor.jpg",
+    "source_sha256": "c742ddd8f070afdb6e364d7f5ea8c49e22f12c6d97236cbffd2f594675cd97c9",
+    "output_sha256": "98b5bb01404f2b420a218a35cd784f023563d6967c3ae8259766ec28bdaae723",
+    "dimensions": [
+      1000,
+      667
+    ],
+    "bytes": 185672
+  },
+  "hixbot-robot-band.webp": {
+    "source_file": "hixbot-robot-band.jpg",
+    "source_sha256": "567e8914d9ce4bc68a0664705d796e66701a4047a064b9b64f30ea0285a1b5eb",
+    "output_sha256": "c7976ed48db04334591e412a2839fd62f76cb2505c54c0015a06e78c523ea0f0",
+    "dimensions": [
+      800,
+      450
+    ],
+    "bytes": 56888
+  },
+  "huaqiangbei-museum.webp": {
+    "source_file": "huaqiangbei-museum.jpg",
+    "source_sha256": "f448fcd0392790b02fc8bebc9bb7cd8a4e6a9f309641073e03198de450d0d8fe",
+    "output_sha256": "c7d79cb88534244cd841a144bd4d88995a1440fef6836684df05e668982b2064",
+    "dimensions": [
+      800,
+      400
+    ],
+    "bytes": 66762
+  },
+  "huaqiangbei.webp": {
+    "source_file": "huaqiangbei.jpg",
+    "source_sha256": "17d6127f65de43366f629faaad1dee47c4e7f5801b0a1cacae2f453cfc537f56",
+    "output_sha256": "f01c61b799a59da02e0aabe1ea44001e73f056b6e861ca89bd71f53db670d7ba",
+    "dimensions": [
+      1600,
+      1200
+    ],
+    "bytes": 326276
+  },
+  "mixc-world.webp": {
+    "source_file": "mixc-world.jpg",
+    "source_sha256": "c2bc657ee740587b3068342005e09d13ef0f144d36f2cda48ca5aceb77b90ac3",
+    "output_sha256": "eceed89be1db56a6f79af266905fe05209f2416e4466649f30c3ca74f8dff312",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "bytes": 261574
+  },
+  "nantou-ancient-city.webp": {
+    "source_file": "nantou-ancient-city.jpg",
+    "source_sha256": "8c5c8762743bee552add06d72b3e887d98df6d3747ef2a07d54d081e471ab258",
+    "output_sha256": "9108be4d0ddb7bc89c231486ca4d2b10a04e2530683f6c149e273aedbcc0ab6f",
+    "dimensions": [
+      1600,
+      808
+    ],
+    "bytes": 176890
+  },
+  "ping-an-finance-centre.webp": {
+    "source_file": "ping-an-finance-centre.jpg",
+    "source_sha256": "1e121b839a621f59c8d0821be41fa35ff1bed93a87ce80f610ab391789e63b05",
+    "output_sha256": "fed303fea6b083628536b53ef2fa621ded2e140805b5d998ce608f8a38c84d19",
+    "dimensions": [
+      667,
+      562
+    ],
+    "bytes": 63952
+  },
+  "royce-hotel.webp": {
+    "source_file": "royce-hotel.jpg",
+    "source_sha256": "ab7baa033589fdcdbf10680f5973962fd60ea0d5f26b7fa6a453fcb051e77000",
+    "output_sha256": "de7171f62522bfd149d9673a1c39021414fcb0700028867af06f9f3ad3137f96",
+    "dimensions": [
+      735,
+      555
+    ],
+    "bytes": 67492
+  },
+  "seg-electronics-market.webp": {
+    "source_file": "seg-electronics-market.jpg",
+    "source_sha256": "39df8c6f71a78af15ebcbeda090cd53a8bf734e5091e52b2dc90f3de63b2b7db",
+    "output_sha256": "60573fa06555ae731bcf7630b0f1c5244b5189d57a1626a854e093aecac79086",
+    "dimensions": [
+      675,
+      1200
+    ],
+    "bytes": 142658
+  },
+  "shajing-ancient-ruins.webp": {
+    "source_file": "shajing-ancient-ruins.jpg",
+    "source_sha256": "64dfe7e4cfd81706d30cebf3cf317dcccc3c74b41161bb1da3ea9d45feb7957c",
+    "output_sha256": "a04593d578bfce18f097e1bb29febe713d67e2e4080f6ec7b187f18e53e50d23",
+    "dimensions": [
+      1024,
+      576
+    ],
+    "bytes": 165426
+  },
+  "shekou-market.webp": {
+    "source_file": "shekou-market.jpg",
+    "source_sha256": "3efc607eac142a92277634563f665d3c4312e71e2a37149f8ed266388fe8d30f",
+    "output_sha256": "b7856f6a3e41e476b85105b81a458784cf0be50af0a2ae1432602f0a995af0b7",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "bytes": 204678
+  },
+  "shenzhen-airport.webp": {
+    "source_file": "shenzhen-airport.jpg",
+    "source_sha256": "71207600ce3b2c10393f0adce9f449ab8b308039df4c2658ab82fb7b71da49bd",
+    "output_sha256": "9455314f36b5af975d5dc5f83f0af6a823626c3bd0962d98a28ce203b41dbfc8",
+    "dimensions": [
+      1280,
+      582
+    ],
+    "bytes": 163372
+  },
+  "shenzhen-bay-park.webp": {
+    "source_file": "shenzhen-bay-park.jpg",
+    "source_sha256": "b0bfc8bc712f4b7de8036cd90f022d338fc22d1fd2ada8e86e43280440179842",
+    "output_sha256": "d79e4adfac6419fe4154d1a7159f6a4c73c9bf11c2a1b39b3f02b146effadffd",
+    "dimensions": [
+      1600,
+      1200
+    ],
+    "bytes": 417996
+  },
+  "shenzhen-eye.webp": {
+    "source_file": "shenzhen-eye.jpg",
+    "source_sha256": "4b3ccbee29d5db45a121fa5c9ef45e0ff2e272408d88e4d64ca78a1a9383233d",
+    "output_sha256": "eaf31f7188680f8f800fc8796ef392dc5d5b7c7b765eee314f83410157243695",
+    "dimensions": [
+      900,
+      1200
+    ],
+    "bytes": 212058
+  },
+  "shenzhen-hero.webp": {
+    "source_file": "shenzhen-hero.jpg",
+    "source_sha256": "38288e7dcbdfc494b81c4e0079da817f09f435b14f07b5f63d5705d6d64fe15b",
+    "output_sha256": "db8a3dfcbc61fc18cf467b5362cb5104eaa28b7aa0bd54df7c0777fc9a846ca2",
+    "dimensions": [
+      1600,
+      1199
+    ],
+    "bytes": 257794
+  },
+  "shenzhen-peoples-hospital.webp": {
+    "source_file": "shenzhen-peoples-hospital.jpg",
+    "source_sha256": "d8daf637e911c018d1e1698a34e144bac61fb8a0cdd28da8a04223146d3accb2",
+    "output_sha256": "5ca0edbebd50b6fa3ec9011dcc4aeba8be15bff4534c495ca9d06f996c2684e7",
+    "dimensions": [
+      667,
+      562
+    ],
+    "bytes": 64108
+  },
+  "shenzhen-talent-park.webp": {
+    "source_file": "shenzhen-talent-park.jpg",
+    "source_sha256": "d192639c2079fac685a44f1b903e7a21fa954e9eb789f0dd5fbbce5006069b1e",
+    "output_sha256": "dbe110a97f02de996939052a8211f34c2ea4251c6388b7f11e1a2599642cd777",
+    "dimensions": [
+      1600,
+      1067
+    ],
+    "bytes": 240530
+  },
+  "tencent-binhai.webp": {
+    "source_file": "tencent-binhai.png",
+    "source_sha256": "95d250e27dac7161e98b96e106c1d33ea0c810a7a8a0cfdb7ffb5002a4298f5c",
+    "output_sha256": "9ea8a19d35b0cc706dd6072c1f79507f01ae9b246d9a16dbe9d82074f44a8da6",
+    "dimensions": [
+      519,
+      344
+    ],
+    "bytes": 23150
+  },
+  "window-of-the-world.webp": {
+    "source_file": "window-of-the-world.jpg",
+    "source_sha256": "d2702eb652569491b9044fd30aca68e75d35c94a00230d288135aca4e4910d32",
+    "output_sha256": "1a32a5e90bff8cf05785bf98938eed025eaea038dfaca585280ce772648b4fa1",
+    "dimensions": [
+      1152,
+      764
+    ],
+    "bytes": 95570
+  },
+  "xpeng-x2.webp": {
+    "source_file": "xpeng-x2.jpg",
+    "source_sha256": "89105b7e53ee318fd2e4f3b16be05585b68b15b46881473990840013eb30c227",
+    "output_sha256": "1d8e12ece08b317df12ff752a230e9579048969a00ef8fc28af82df00c6bfe7e",
+    "dimensions": [
+      960,
+      538
+    ],
+    "bytes": 28330
+  },
+  "xtalpi-platform.webp": {
+    "source_file": "xtalpi-platform.jpg",
+    "source_sha256": "2497c274752c967971b55ab8469e1cec452dd2f8ccf1d76f5c190f330d27523a",
+    "output_sha256": "e940c9599c799600c538352aa7281c14e68b4bb9c5f65c5f80758fa8bb2fbe1a",
+    "dimensions": [
+      667,
+      563
+    ],
+    "bytes": 66932
+  },
+  "one-avenue.webp": {
+    "source_file": "one-avenue-img-001.jpg (MTR PDF embedded image)",
+    "output_sha256": "9dc31a7b6c7d67afddd60d384859f69215b0e21aa7b79a8214b0be4d7e0837f8",
+    "dimensions": [
+      656,
+      315
+    ],
+    "bytes": 83770
+  }
+}
