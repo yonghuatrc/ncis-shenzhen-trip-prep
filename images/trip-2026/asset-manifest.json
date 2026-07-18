@@ -79,6 +79,16 @@
     ],
     "bytes": 56888
   },
+  "huaqiangbei-route.webp": {
+    "source_file": "华强北路线.png",
+    "source_sha256": "8b92c2fccc442f5be5e65a0481626d60399d315afd5e6d0baa2ee84a9dd78127",
+    "output_sha256": "a308990335c520dcbc7cfc21e4ec2bc5908aa994f32215ba7613980bf9180ed1",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 406228
+  },
   "huaqiangbei-museum.webp": {
     "source_file": "huaqiangbei-museum.jpg",
     "source_sha256": "f448fcd0392790b02fc8bebc9bb7cd8a4e6a9f309641073e03198de450d0d8fe",
@@ -277,5 +287,35 @@
       315
     ],
     "bytes": 83770
+  },
+  "nantou-route-map.webp": {
+    "source_file": "南头古城路线图.png",
+    "source_sha256": "c0881013dd667f01b5be497842ff15c7c269079131b7c78348d4593f33b45995",
+    "output_sha256": "72c2b7fbe19143b2e571c2967955ed876fa89b2c83dc7d7765801eb41a712241",
+    "dimensions": [
+      1402,
+      1122
+    ],
+    "bytes": 360730
+  },
+  "shenzhen-bay-talent-park-route.webp": {
+    "source_file": "深圳湾人才公园一日探索路线图。.png",
+    "source_sha256": "a0bbb746e7b9926202ea329be14ac3ffd9f7c411049b3d533e0172c0f2cd87dd",
+    "output_sha256": "1afe9eb240ae1055ec343b9955622a1f81087c564cf59accf2156e6ac1e95e7a",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 279448
+  },
+  "shekou-market-coastal-night-route.webp": {
+    "source_file": "蛇口市场&滨海夜景路线图.png",
+    "source_sha256": "e73f716cae69ba9bd02b163d10f89dbeabe098bff1fcc53557c755074d434edb",
+    "output_sha256": "9e413e842945a35fe5a192529f90e98f32843bb7ae7edaefea2fca6cdcf3ecd0",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "bytes": 322132
   }
 }

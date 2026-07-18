@@ -29,6 +29,11 @@
     "image_url": "https://inews.gtimg.com/om_bt/Om-toc1r_cHSmYgsL8Gx6Htc2ruZwBhqkQ2SWTQVjaqsIAA/641",
     "credit": "Nanfang Metropolis Daily via Tencent News · HIXBOT robot band"
   },
+  "huaqiangbei-route.webp": {
+    "source_url": "user-provided local file: 华强北路线.png",
+    "image_url": "华强北路线.png",
+    "credit": "Boss-provided · Huaqiangbei day-route map"
+  },
   "shekou-market.webp": {
     "source_url": "https://hk.trip.com/moments/poi-shekou-market-18178827",
     "image_url": "https://ak-d.tripcdn.com/images/1mi0f12000jc7x316330D_Q90.jpg?proc=source/trip",
@@ -58,5 +63,20 @@
     "source_url": "user-provided local file: tencent-binhai.png",
     "image_url": "tencent-binhai.png",
     "credit": "Boss-provided · Tencent Binhai HQ"
+  },
+  "nantou-route-map.webp": {
+    "source_url": "user-provided local file: 南头古城路线图.png",
+    "image_url": "南头古城路线图.png",
+    "credit": "Boss-provided · Nantou Ancient City route reference"
+  },
+  "shenzhen-bay-talent-park-route.webp": {
+    "source_url": "user-provided local file: 深圳湾人才公园一日探索路线图。.png",
+    "image_url": "深圳湾人才公园一日探索路线图。.png",
+    "credit": "Boss-provided · Shenzhen Bay and Talent Park route reference"
+  },
+  "shekou-market-coastal-night-route.webp": {
+    "source_url": "user-provided local file: 蛇口市场&滨海夜景路线图.png",
+    "image_url": "蛇口市场&滨海夜景路线图.png",
+    "credit": "Boss-provided · Shekou Market and coastal night-view route reference"
   }
 }
