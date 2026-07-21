@@ -5,37 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Day 1 Takeaways — Ping An | NCIS Shenzhen Trip 2026</title>
 <style>
-:root{--c-pingan:#E55B12;--c-bg:#F5F7FB;--c-white:#ffffff;--c-text:#1A1A1A;--c-muted:#718096;--c-red:#C8102E;--c-amber:#B8860B;--c-green:#0A6EBD}
+:root{--c:#E55B12;--c-bg:#F5F7FB;--c-white:#ffffff;--c-text:#1A1A1A;--c-muted:#718096;--c-red:#C8102E;--c-amber:#B8860B;--c-green:#0A6EBD}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,"Segoe UI","Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--c-bg);color:var(--c-text);line-height:1.6;font-size:15px}
 .page{max-width:900px;margin:0 auto;padding:0 24px 80px}
 .back-link{display:inline-flex;align-items:center;gap:6px;padding:16px 0 0;font-size:13px;color:var(--c-muted);text-decoration:none}
-.back-link:hover{color:var(--c-pingan)}
-.hero{background:var(--c-pingan);color:white;padding:48px 40px 40px;border-radius:0 0 28px 28px;margin-bottom:36px}
+.back-link:hover{color:var(--c)}
+.hero{background:var(--c);color:white;padding:48px 40px 40px;border-radius:0 0 28px 28px;margin-bottom:36px}
 .hero .day{font-size:12px;text-transform:uppercase;letter-spacing:2px;opacity:.85;margin-bottom:8px}
 .hero h1{font-size:36px;font-weight:800;margin-bottom:8px}
 .hero .sub{font-size:16px;opacity:.92}
 .section{background:var(--c-white);border-radius:20px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 16px rgba(0,0,0,.05);border:1px solid #EAEEF6}
-.section h2{font-size:20px;font-weight:700;color:var(--c-pingan);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.section h2{font-size:20px;font-weight:700;color:var(--c);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.section h2 .emoji{font-size:22px}
 .section h3{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--c-muted);margin:20px 0 10px;border-bottom:1px solid #EAEEF6;padding-bottom:6px}
 table{width:100%;border-collapse:collapse;margin-top:10px}
 th,td{border:1px solid #EAEEF6;padding:10px 14px;text-align:left;font-size:13px}
-th{background:var(--c-pingan);color:white;font-size:11px;text-transform:uppercase;letter-spacing:1px}
+th{background:var(--c);color:white;font-size:11px;text-transform:uppercase;letter-spacing:1px}
 tr:nth-child(even){background:#F8FAFC}
-td strong{color:var(--c-pingan)}
-.highlight{background:linear-gradient(135deg,#FEF3EC 0%,#F8FAFC 100%);border-radius:12px;padding:16px 20px;font-size:14px;border-left:4px solid var(--c-pingan)}
+td strong{color:var(--c)}
+.bullet-list{margin-left:20px}
+.bullet-list li{margin-bottom:6px;font-size:14px}
+.highlight{background:linear-gradient(135deg,#FEF3EC 0%,#F8FAFC 100%);border-radius:12px;padding:16px 20px;font-size:14px;border-left:4px solid var(--c)}
+.highlight-alt{background:linear-gradient(135deg,#FEF9EC 0%,#F8FAFC 100%);border-radius:12px;padding:16px 20px;font-size:14px;border-left:4px solid var(--c-amber)}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin-top:8px}
+.visit-grid .k{font-weight:600;font-size:13px}
+.visit-grid .v{font-size:13px;color:#4A5568}
 .file-ref{font-size:12px;color:var(--c-muted);margin-top:16px}
 .file-ref code{background:#F0F0F0;padding:2px 6px;border-radius:4px;font-size:11px}
-.divider{border:none;border-top:1px solid #EAEEF6;margin:32px 0}
 .days-nav{display:flex;gap:10px;margin-top:32px;flex-wrap:wrap}
-.day-btn{display:inline-block;padding:10px 18px;background:var(--c-white);border:1px solid #EAEEF6;border-radius:12px;font-size:13px;font-weight:600;color:var(--c-pingan);text-decoration:none;transition:all .15s}
-.day-btn.active{background:var(--c-pingan);color:white;border-color:var(--c-pingan)}
+.day-btn{display:inline-block;padding:10px 18px;background:var(--c-white);border:1px solid #EAEEF6;border-radius:12px;font-size:13px;font-weight:600;color:var(--c);text-decoration:none;transition:all .15s}
+.day-btn.active{background:var(--c);color:white;border-color:var(--c)}
 .day-btn:hover:not(.active){background:#FEF3EC}
-.section h2 .emoji{font-size:22px}
+.divider{border:none;border-top:1px solid #EAEEF6;margin:32px 0}
+.follow-ups li{margin-bottom:10px;font-size:14px;padding-left:4px}
+.follow-ups li strong{color:var(--c)}
 @media(max-width:600px){
   .hero{padding:32px 22px 28px}
   .hero h1{font-size:26px}
   .section{padding:20px 20px}
+  .visit-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -47,33 +56,36 @@ td strong{color:var(--c-pingan)}
   <div class="hero">
     <div class="day">Day 1 — Monday 20 July 2026</div>
     <h1>&#128220; Ping An Takeaways</h1>
-    <div class="sub">Ping An Insurance (Group) Company of China &middot; Shenzhen &middot; 20 Jul 2026</div>
+    <div class="sub">Ping An Insurance (集团) &middot; Shenzhen &middot; 20 Jul 2026</div>
   </div>
 
   <!-- Key Metrics -->
   <div class="section">
-    <h2><span class="emoji">&#128200;</span> Key Metrics — AI at Scale</h2>
+    <h2><span class="emoji">&#128200;</span> Key Metrics</h2>
     <table>
       <tr><th>Metric</th><th>Value</th></tr>
       <tr><td>Annual AI customer service interactions</td><td><strong>22 billion</strong></td></tr>
       <tr><td>AI coverage of customer service calls</td><td><strong>82%</strong></td></tr>
       <tr><td>AI service resolution rate</td><td><strong>93%</strong></td></tr>
       <tr><td>AI agents deployed</td><td><strong>70,000+</strong></td></tr>
-      <tr><td>Car insurance damage assessment time</td><td><strong>3 minutes</strong></td></tr>
-      <tr><td>Claims settlement time</td><td><strong>6 minutes</strong></td></tr>
+      <tr><td>Car insurance damage assessment time</td><td><strong>3 min</strong></td></tr>
+      <tr><td>Claims settlement time</td><td><strong>6 min</strong></td></tr>
       <tr><td>AI-powered business scenarios</td><td><strong>840+</strong></td></tr>
       <tr><td>Self-developed domain models</td><td><strong>67</strong></td></tr>
       <tr><td>Anti-fraud savings (RMB)</td><td><strong>12.8 billion</strong></td></tr>
       <tr><td>Car insurance policies by AI</td><td><strong>90%</strong></td></tr>
+      <tr><td>AI doctor diagnoses</td><td><strong>11,300 diseases</strong></td></tr>
       <tr><td>Daily token consumption</td><td><strong>100 billion</strong></td></tr>
     </table>
   </div>
 
-  <!-- Watch / Hear / Speak -->
+  <!-- Core Capabilities -->
   <div class="section">
-    <h2><span class="emoji">&#128065;</span> Core AI: Watch, Hear &amp; Speak</h2>
+    <h2><span class="emoji">&#128640;</span> Core Capabilities</h2>
+
+    <h3>Watch, Hear &amp; Speak</h3>
     <table>
-      <tr><th style="width:120px">Capability</th><th>Detail</th></tr>
+      <tr><th style="width:140px">Capability</th><th>Detail</th></tr>
       <tr><td><strong>Watch — Facial</strong></td><td>1:1 recognition <strong>99.8%</strong>; 1:N (100M) <strong>90%</strong>; Lip reading <strong>95%</strong></td></tr>
       <tr><td><strong>Watch — Medical</strong></td><td>Medical condition analysis <strong>&gt;90%</strong>; Surgical tumour <strong>&gt;80%</strong></td></tr>
       <tr><td><strong>Watch — Auto</strong></td><td>Car damage &amp; parts inspection <strong>95%</strong></td></tr>
@@ -81,103 +93,38 @@ td strong{color:var(--c-pingan)}
       <tr><td><strong>Hear — Speech</strong></td><td>Multilingual/gender recognition <strong>95%</strong>; Outbound/inbound calls <strong>95%</strong></td></tr>
       <tr><td><strong>Speak — NLP</strong></td><td>Intent recognition <strong>&gt;90%</strong>; World's first 3-SQuAD / 1-GLUE (PA-Bert / PA-GPT)</td></tr>
     </table>
-  </div>
 
-  <!-- Large Model Architecture -->
-  <div class="section">
-    <h2><span class="emoji">&#128640;</span> Large Model Architecture — 5-Layer Stack</h2>
+    <h3>Large Model Architecture — 5-Layer Stack</h3>
     <table>
       <tr><th style="width:140px">Layer</th><th>Content</th></tr>
       <tr><td><strong>Scenario</strong></td><td>Bank (digital business, management, operations) + Insurance (auto, life, claims)</td></tr>
-      <tr><td><strong>Data</strong></td><td>Multimodal → knowledge processing → unified storage + data governance + security</td></tr>
-      <tr><td><strong>Algorithm</strong></td><td>L2 Application → L1 Vertical (Finance, Healthcare, Code) → L0 Universal (DeepSeek, Qwen, Llama, PAGpt)</td></tr>
+      <tr><td><strong>Data</strong></td><td>Multimodal &rarr; knowledge processing &rarr; unified storage + data governance + security</td></tr>
+      <tr><td><strong>Algorithm</strong></td><td>L2 Application &rarr; L1 Vertical (Finance, Healthcare, Code) &rarr; L0 Universal (DeepSeek, Qwen, Llama, PAGpt)</td></tr>
       <tr><td><strong>Computing</strong></td><td>NVIDIA, Huawei Ascend, Haiguang</td></tr>
       <tr><td><strong>Talent</strong></td><td>Full-stack ecosystem across the value chain</td></tr>
     </table>
-    <div class="highlight" style="margin-top:14px">
-      <strong>Three-tier model:</strong> L0 general (foundation) → L1 vertical domain (cost-performance) → L2 application (closest to end-user). Key initiatives: high-quality vertical data + knowledge distillation to reduce costs.
-    </div>
-  </div>
 
-  <!-- AI Mid-Platform -->
-  <div class="section">
-    <h2><span class="emoji">&#128187;</span> AI Mid-Platform (MCP) — FinAI Capabilities</h2>
+    <h3>AI Mid-Platform (MCP) — FinAI Capabilities</h3>
     <table>
       <tr><th>Track</th><th>Capability</th></tr>
       <tr><td>Text processing</td><td>Complex long text, document table extraction</td></tr>
       <tr><td>PDF processing</td><td>Format processing</td></tr>
-      <tr><td>Image/OCR</td><td>OCR model</td></tr>
+      <tr><td>Image / OCR</td><td>OCR model</td></tr>
       <tr><td>Image + Video</td><td>CV, VL model</td></tr>
       <tr><td>Voice</td><td>Real-time ASR + offline ASR</td></tr>
     </table>
-    <p style="margin-top:12px;font-size:13px;color:#4A5568">Delivered via: Strategic platform, intelligent arrangement, ChatBI analysis, RAG review, RAG Q&amp;A. MCP architecture: Docking (API, page) → Standardisation (MCP Client/Server) → Planning + display.</p>
-  </div>
 
-  <!-- 5-Step Implementation -->
-  <div class="section">
-    <h2><span class="emoji">&#128465;</span> AI Implementation — 5-Step Methodology</h2>
+    <h3>5-Step AI Implementation Methodology</h3>
     <table>
       <tr><th style="width:140px">Step</th><th>Focus</th></tr>
       <tr><td><strong>1. Scene Discovery</strong></td><td>Align with business strategy; define objectives (revenue, cost, risk, CX)</td></tr>
       <tr><td><strong>2. Opportunity ID</strong></td><td>Analyse needs, data, technology maturity; design &amp; validate solution</td></tr>
-      <tr><td><strong>3. Technology Dev</strong></td><td>Knowledge engineering → modelling (beginner → advanced) → integration → validation</td></tr>
+      <tr><td><strong>3. Technology Dev</strong></td><td>Knowledge engineering &rarr; modelling (beginner &rarr; advanced) &rarr; integration &rarr; validation</td></tr>
       <tr><td><strong>4. Business App</strong></td><td>Indicator tracking; expert feedback; model optimisation</td></tr>
       <tr><td><strong>5. Operations</strong></td><td>Model iteration; scenario expansion</td></tr>
     </table>
-    <div class="highlight" style="margin-top:14px">
-      <strong>Shift:</strong> "Machine-Assisted Human" &rarr; "Human-Assisted Machine" — business experts assist AI, turning tasks into annotations to enhance AI performance.
-    </div>
-  </div>
 
-  <!-- Industry Applications -->
-  <div class="section">
-    <h2><span class="emoji">&#127970;</span> Industry AI Applications</h2>
-
-    <h3>Retail Customer Engagement</h3>
-    <table>
-      <tr><td>Customer tags</td><td><strong>900+</strong> total; <strong>78+</strong> AI-generated from calls &amp; IMs</td></tr>
-      <tr><td>Leads management</td><td><strong>700+</strong> types; <strong>90%+</strong> traceable engagements</td></tr>
-      <tr><td>Inspection accuracy</td><td><strong>92%</strong>; 36M / 70M inspection volume</td></tr>
-    </table>
-
-    <h3>Smart Telemarketing</h3>
-    <table>
-      <tr><td>AI completion rate</td><td><strong>85%</strong> (simple scenarios: <strong>100%</strong>)</td></tr>
-      <tr><td>Effective reach enhancement</td><td><strong>80%&uarr;</strong></td></tr>
-      <tr><td>Risk detection rate</td><td><strong>90%&uarr;</strong></td></tr>
-    </table>
-
-    <h3>AI-Empowered Debt Collection</h3>
-    <table>
-      <tr><th>Stage</th><th>Before</th><th>After (AI)</th></tr>
-      <tr><td>Pre-due</td><td>No prevention; 8-15% roll-in</td><td>Predictive segmentation; <strong>5-10%</strong> roll-in</td></tr>
-      <tr><td>Early M0-M2</td><td>Manual outbound; 93% recovery</td><td>AI voice bot; <strong>95%</strong> recovery</td></tr>
-      <tr><td>Mid M3-M12</td><td>Third-party; 2-4% annual</td><td>AI-assisted negotiation; <strong>3-5%</strong> annual</td></tr>
-      <tr><td>Late M12+</td><td>Court litigation; 0.3-1.5%</td><td>Compliance review; <strong>0.5-2%</strong></td></tr>
-    </table>
-    <p style="margin-top:8px;font-size:12px;color:#718096">Products: OB Tel AI Agent, Agent Operation Copilot, Conversation Quality Analytics</p>
-
-    <h3>AGI Deepfake Detection</h3>
-    <p style="font-size:14px">Detects photo modification, AI face swap, AIGC-produced human faces. Application: facial authentication security, image evidence authenticity, content review. Defence: Photo activation, AI video face replacement, adversarial attacks.</p>
-  </div>
-
-  <!-- Healthcare -->
-  <div class="section">
-    <h2><span class="emoji">&#10004;</span> Ping An Medical</h2>
-    <table>
-      <tr><th>Application</th><th>Metric</th></tr>
-      <tr><td>COVID-19 Intelligent Imaging — accuracy</td><td><strong>&gt;97%</strong></td></tr>
-      <tr><td>Identification time</td><td><strong>15 seconds</strong></td></tr>
-      <tr><td>Medical institutions deployed</td><td><strong>1,500+</strong></td></tr>
-      <tr><td>Cumulative reads</td><td><strong>400,000+</strong></td></tr>
-      <tr><td>Suspected patients identified</td><td><strong>20,000+</strong></td></tr>
-    </table>
-    <p style="margin-top:12px;font-size:14px"><strong>One-Minute Clinic</strong> (平安好医生) — telemedicine kiosk: consultation room + medication dispensing + triage. Rural health programme: Village Doctors.</p>
-  </div>
-
-  <!-- HR 8Q+TEL -->
-  <div class="section">
-    <h2><span class="emoji">&#128101;</span> HR Assessment: 8Q+TEL Model — 11 Dimensions</h2>
+    <h3>HR Assessment: 8Q+TEL Model — 11 Dimensions</h3>
     <table>
       <tr><th style="width:60px">Factor</th><th>Chinese</th><th>Description</th></tr>
       <tr><td><strong>IQ</strong></td><td>智商</td><td>Intelligence — quick response, educational background</td></tr>
@@ -192,66 +139,99 @@ td strong{color:var(--c-pingan)}
       <tr><td><strong>E</strong></td><td>做事</td><td>Doing affairs — results orientation, organisational planning</td></tr>
       <tr><td><strong>L</strong></td><td>带队伍</td><td>Leading teams — team leadership, passionate motivation</td></tr>
     </table>
-    <p style="margin-top:10px;font-size:13px;color:#4A5568">Team Evaluation Map: 2D matrix (performance ranking vs. comprehensive quality) to identify key cultivation targets and ready-to-exit employees.</p>
   </div>
 
-  <!-- AI Governance -->
+  <!-- NCIS Highlights -->
   <div class="section">
-    <h2><span class="emoji">&#128737;</span> AI Governance &amp; Security</h2>
+    <h2><span class="emoji">&#128100;</span> NCIS Highlights</h2>
 
-    <h3>3 Key Elements of AI Governance</h3>
+    <h3>Industry AI Applications</h3>
     <table>
-      <tr><th style="width:130px">Principle</th><th>Description</th></tr>
-      <tr><td><strong>Transparency</strong></td><td>AI decision-making explainable; regulators and consumers understand AI decisions</td></tr>
-      <tr><td><strong>Fairness</strong></td><td>Avoid bias in AI decision-making; fair to all groups</td></tr>
-      <tr><td><strong>Compliance</strong></td><td>Comply with laws &amp; regulations (e.g. GDPR); financial regulatory requirements (SEC, Basel)</td></tr>
+      <tr><th>Application</th><th>Key Metrics</th></tr>
+      <tr>
+        <td><strong>Retail Customer Engagement</strong></td>
+        <td>900+ customer tags; 78+ AI-generated; 700+ lead types; 90%+ traceable engagements; 92% inspection accuracy</td>
+      </tr>
+      <tr>
+        <td><strong>Smart Telemarketing</strong></td>
+        <td>AI completion <strong>85%</strong> (simple scenarios: <strong>100%</strong>); reach enhancement <strong>80%&uarr;</strong>; risk detection <strong>90%&uarr;</strong></td>
+      </tr>
+      <tr>
+        <td><strong>AI-Empowered Debt Collection</strong></td>
+        <td>Early M0-M2 recovery: <strong>95%</strong> (from 93%); Mid M3-M12 annual recovery: <strong>3-5%</strong> (from 2-4%)</td>
+      </tr>
+      <tr>
+        <td><strong>AGI Deepfake Detection</strong></td>
+        <td>Detects photo modification, AI face swap, AIGC faces. Application: facial authentication security, content review.</td>
+      </tr>
     </table>
 
-    <h3>10-Layer Security Architecture</h3>
+    <h3>Healthcare — Ping An Medical</h3>
     <table>
-      <tr><th style="width:160px">Pillar</th><th>Lines</th><th>Coverage</th></tr>
-      <tr><td><strong>Model Training</strong></td><td>Lines 1–4</td><td>Data collection → cleaning → training → evaluation; intrinsic security defence</td></tr>
-      <tr><td><strong>Risk Control</strong></td><td>Lines 5–6</td><td>Defence capability across control and attack-defence</td></tr>
-      <tr><td><strong>Ops System</strong></td><td>Lines 7–9</td><td>Pre, during, post prevention; party assessment, ops guarantee, anti-propagation</td></tr>
-      <tr><td><strong>Institutional</strong></td><td>Line 10</td><td>PA risk control rules &amp; regulations; AI ethics principles</td></tr>
+      <tr><th>Application</th><th>Metric</th></tr>
+      <tr><td>COVID-19 Intelligent Imaging — accuracy</td><td><strong>&gt;97%</strong></td></tr>
+      <tr><td>Identification time</td><td><strong>15 seconds</strong></td></tr>
+      <tr><td>Medical institutions deployed</td><td><strong>1,500+</strong></td></tr>
+      <tr><td>Cumulative reads</td><td><strong>400,000+</strong></td></tr>
+      <tr><td>One-Minute Clinic (telemedicine kiosk)</td><td>平安好医生 — consultation room + medication dispensing + triage</td></tr>
     </table>
-  </div>
 
-  <!-- Key Takeaway -->
-  <div class="section">
-    <h2><span class="emoji">&#128640;</span> Key Philosophical Takeaway</h2>
-    <div class="highlight">
-      AI as <strong>strategic infrastructure</strong> — shared capability, not a project. Ping An builds governed, reusable AI platforms that improve outcomes, support employees, and operate safely within regulatory and institutional guardrails.
+    <h3>AI Governance &amp; Security</h3>
+    <table>
+      <tr><th>Principle</th><th>Description</th></tr>
+      <tr><td><strong>Transparency</strong></td><td>AI decisions explainable; regulators and consumers understand AI decisions</td></tr>
+      <tr><td><strong>Fairness</strong></td><td>Avoid bias; fair to all groups</td></tr>
+      <tr><td><strong>Compliance</strong></td><td>GDPR, financial regulations (SEC, Basel)</td></tr>
+    </table>
+    <div class="highlight-alt" style="margin-top:12px">
+      <strong>10-Layer Security Architecture:</strong> Model Training (lines 1-4) &rarr; Risk Control (5-6) &rarr; Ops System (7-9) &rarr; Institutional Guarantee (10)
     </div>
-    <p style="margin-top:12px;font-size:14px;color:#4A5568">
-      AI scale must work <strong>within</strong> governance, cybersecurity, and regulatory frameworks — not bypass them. The shift is from "Machine-Assisted Human" to "Human-Assisted Machine": business experts turning tasks into annotations that make AI smarter.
-    </p>
   </div>
 
   <!-- NCIS Relevance -->
   <div class="section">
-    <h2><span class="emoji">&#128137;</span> NCIS/NUHS Relevance</h2>
+    <h2><span class="emoji">&#128137;</span> NCIS Relevance</h2>
     <table>
       <tr><th>Ping An Capability</th><th>NCIS Application</th></tr>
       <tr><td>Medical imaging AI (&gt;90%)</td><td>Oncology pathology/radiology AI benchmarks</td></tr>
       <tr><td>Voice &amp; chatbot for customers</td><td>Appointment management, patient education, survivorship support</td></tr>
       <tr><td>10-layer security architecture</td><td>Healthcare AI governance within SingHealth/Synapxe/Epic ecosystem</td></tr>
       <tr><td>Staff copilot / AI-human co-call</td><td>AI-assisted clinical documentation</td></tr>
-      <tr><td>AI-native process redesign (5-step)</td><td>Don't bolt on AI — redesign the workflow end-to-end</td></tr>
+      <tr><td>AI-native process redesign (5-step)</td><td>Redesign NCIS workflow end-to-end, not just add a chatbot</td></tr>
       <tr><td>Privacy-preserving analytics</td><td>Healthcare data sensitivity; controlled data environments</td></tr>
     </table>
   </div>
 
-  <!-- NCIS Follow-ups -->
+  <!-- Follow-Ups -->
   <div class="section">
-    <h2><span class="emoji">&#128203;</span> 5 Recommended Follow-Ups for NCIS/NUHS</h2>
-    <ol style="margin-left:20px;font-size:14px">
-      <li style="margin-bottom:8px"><strong>AI governance framework</strong> — adapt Ping An's 10-layer security model for healthcare AI deployment within Epic + Synapxe ecosystem</li>
-      <li style="margin-bottom:8px"><strong>Patient-facing AI</strong> — chatbot/voice agent for appointment, navigation, survivorship support (referencing Ping An's 82% AI resolution rate)</li>
-      <li style="margin-bottom:8px"><strong>AI imaging benchmarks</strong> — explore accuracy benchmarks for oncology imaging AI (Ping An: &gt;90%)</li>
-      <li style="margin-bottom:8px"><strong>Staff copilot</strong> — AI-assisted clinical documentation (AI-human co-call model)</li>
-      <li><strong>AI-native process redesign</strong> — apply Ping An's 5-step methodology: select one workflow, redesign end-to-end, don't just add a chatbot</li>
+    <h2><span class="emoji">&#128203;</span> 5 Recommended Follow-Ups for NCIS</h2>
+    <ol class="follow-ups">
+      <li><strong>AI governance framework</strong> — adapt Ping An's 10-layer security model for healthcare AI deployment within Epic + Synapxe ecosystem</li>
+      <li><strong>Patient-facing AI</strong> — chatbot/voice agent for appointment, navigation, survivorship support (82% AI resolution model)</li>
+      <li><strong>AI imaging benchmarks</strong> — explore accuracy benchmarks for oncology imaging AI (Ping An: &gt;90%)</li>
+      <li><strong>Staff copilot</strong> — AI-assisted clinical documentation (AI-human co-call model, Ping An's agent operation copilot)</li>
+      <li><strong>AI-native process redesign</strong> — apply Ping An's 5-step methodology: select one NCIS workflow, redesign end-to-end</li>
     </ol>
+  </div>
+
+  <!-- Visit Details -->
+  <div class="section">
+    <h2><span class="emoji">&#128205;</span> Visit Details</h2>
+    <div class="visit-grid">
+      <div class="k">Organisation</div><div class="v">Ping An Insurance (Group) Company of China (平安保险)</div>
+      <div class="k">Location</div><div class="v">Shenzhen, China</div>
+      <div class="k">Date</div><div class="v">20 July 2026 (Day 1, morning)</div>
+      <div class="k">Slides covered</div><div class="v">~20 slides + 2 videos</div>
+      <div class="k">Focus</div><div class="v">AI at scale: Watch/Hear/Speak, large model architecture, industry applications, HR tools, governance</div>
+    </div>
+  </div>
+
+  <!-- Philosophical Takeaway -->
+  <div class="section">
+    <h2><span class="emoji">&#128640;</span> Philosophical Takeaway</h2>
+    <div class="highlight">
+      AI as <strong>strategic infrastructure</strong> — shared capability, not a project. Ping An builds governed, reusable AI platforms that improve outcomes, support employees, and operate safely within regulatory and institutional guardrails. The shift: from <em>"Machine-Assisted Human"</em> to <em>"Human-Assisted Machine"</em> — business experts turning tasks into annotations that make AI smarter.
+    </div>
   </div>
 
   <hr class="divider">
@@ -259,11 +239,11 @@ td strong{color:var(--c-pingan)}
   <div class="days-nav">
     <a class="day-btn" href="takeaways-day1-tencent.html">Day 1 — Tencent (20 Jul)</a>
     <a class="day-btn active" href="#">Day 1 — Ping An (20 Jul)</a>
-    <a class="day-btn" href="#">Day 2 — Shenzhen People's Hospital (21 Jul)</a>
+    <a class="day-btn" href="#">Day 2 — SZ People's Hospital (21 Jul)</a>
     <a class="day-btn" href="#">Day 3 — XtalPi (22 Jul)</a>
   </div>
 
-  <p class="file-ref" style="margin-top:24px">
+  <p class="file-ref">
     Full markdown: <code>Dropbox/01. Work/NUHS/NCIS-Study-Trip/Takeaways/Day1_PingAn_20260720.md</code>
   </p>
 

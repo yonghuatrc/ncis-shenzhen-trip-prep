@@ -5,46 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Day 1 Takeaways — Tencent | NCIS Shenzhen Trip 2026</title>
 <style>
-:root{--c-tencent:#1E5AFF;--c-bg:#F5F7FB;--c-white:#ffffff;--c-text:#1A1A1A;--c-muted:#718096;--c-red:#C8102E;--c-amber:#B8860B;--c-green:#0A6EBD}
+:root{--c:#1E5AFF;--c-bg:#F5F7FB;--c-white:#ffffff;--c-text:#1A1A1A;--c-muted:#718096;--c-red:#C8102E;--c-amber:#B8860B;--c-green:#0A6EBD}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,"Segoe UI","Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--c-bg);color:var(--c-text);line-height:1.6;font-size:15px}
 .page{max-width:900px;margin:0 auto;padding:0 24px 80px}
 .back-link{display:inline-flex;align-items:center;gap:6px;padding:16px 0 0;font-size:13px;color:var(--c-muted);text-decoration:none}
-.back-link:hover{color:var(--c-tencent)}
-.hero{background:var(--c-tencent);color:white;padding:48px 40px 40px;border-radius:0 0 28px 28px;margin-bottom:36px}
+.back-link:hover{color:var(--c)}
+.hero{background:var(--c);color:white;padding:48px 40px 40px;border-radius:0 0 28px 28px;margin-bottom:36px}
 .hero .day{font-size:12px;text-transform:uppercase;letter-spacing:2px;opacity:.85;margin-bottom:8px}
 .hero h1{font-size:36px;font-weight:800;margin-bottom:8px}
 .hero .sub{font-size:16px;opacity:.92}
 .section{background:var(--c-white);border-radius:20px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 16px rgba(0,0,0,.05);border:1px solid #EAEEF6}
-.section h2{font-size:20px;font-weight:700;color:var(--c-tencent);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.section h2{font-size:20px;font-weight:700;color:var(--c);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.section h2 .emoji{font-size:22px}
 .section h3{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--c-muted);margin:20px 0 10px;border-bottom:1px solid #EAEEF6;padding-bottom:6px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin-top:8px}
-.grid .k{font-weight:600;color:var(--c-text);font-size:13px}
-.grid .v{font-size:13px;color:#4A5568}
-.agent-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px;font-size:13px;margin-top:8px}
-.agent-grid div{padding:4px 0}
-.bullet-list{margin-left:20px}
-.bullet-list li{margin-bottom:6px;font-size:14px}
 table{width:100%;border-collapse:collapse;margin-top:10px}
 th,td{border:1px solid #EAEEF6;padding:10px 14px;text-align:left;font-size:13px}
-th{background:var(--c-tencent);color:white;font-size:11px;text-transform:uppercase;letter-spacing:1px}
+th{background:var(--c);color:white;font-size:11px;text-transform:uppercase;letter-spacing:1px}
 tr:nth-child(even){background:#F8FAFC}
-.red{color:var(--c-red);font-weight:700}
-.amber{color:var(--c-amber)}
-.green{color:var(--c-green)}
-.highlight{background:linear-gradient(135deg,#EEF2FB 0%,#F8FAFC 100%);border-radius:12px;padding:16px 20px;font-size:14px;border-left:4px solid var(--c-tencent)}
+td strong{color:var(--c)}
+.bullet-list{margin-left:20px}
+.bullet-list li{margin-bottom:6px;font-size:14px}
+.highlight{background:linear-gradient(135deg,#EEF2FB 0%,#F8FAFC 100%);border-radius:12px;padding:16px 20px;font-size:14px;border-left:4px solid var(--c)}
+.highlight-alt{background:linear-gradient(135deg,#FEF9EC 0%,#F8FAFC 100%);border-radius:12px;padding:16px 20px;font-size:14px;border-left:4px solid var(--c-amber)}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin-top:8px}
+.visit-grid .k{font-weight:600;font-size:13px}
+.visit-grid .v{font-size:13px;color:#4A5568}
+.agent-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px;font-size:13px;margin-top:8px}
+.agent-grid div{padding:4px 0}
 .file-ref{font-size:12px;color:var(--c-muted);margin-top:16px}
 .file-ref code{background:#F0F0F0;padding:2px 6px;border-radius:4px;font-size:11px}
 .days-nav{display:flex;gap:10px;margin-top:32px;flex-wrap:wrap}
-.day-btn{display:inline-block;padding:10px 18px;background:var(--c-white);border:1px solid #EAEEF6;border-radius:12px;font-size:13px;font-weight:600;color:var(--c-tencent);text-decoration:none;transition:all .15s}
-.day-btn.active{background:var(--c-tencent);color:white;border-color:var(--c-tencent)}
+.day-btn{display:inline-block;padding:10px 18px;background:var(--c-white);border:1px solid #EAEEF6;border-radius:12px;font-size:13px;font-weight:600;color:var(--c);text-decoration:none;transition:all .15s}
+.day-btn.active{background:var(--c);color:white;border-color:var(--c)}
 .day-btn:hover:not(.active){background:#EEF2FB}
 .divider{border:none;border-top:1px solid #EAEEF6;margin:32px 0}
+.follow-ups li{margin-bottom:10px;font-size:14px;padding-left:4px}
+.follow-ups li strong{color:var(--c)}
 @media(max-width:600px){
   .hero{padding:32px 22px 28px}
   .hero h1{font-size:26px}
   .section{padding:20px 20px}
-  .grid,.agent-grid{grid-template-columns:1fr}
+  .visit-grid,.agent-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -56,117 +58,183 @@ tr:nth-child(even){background:#F8FAFC}
   <div class="hero">
     <div class="day">Day 1 — Monday 20 July 2026</div>
     <h1>&#128220; Tencent Takeaways</h1>
-    <div class="sub">Tencent Binhai Mansion, Shenzhen &middot; Caroline Song &amp; team</div>
+    <div class="sub">Tencent (腾讯) &middot; Shenzhen &middot; 20 Jul 2026</div>
   </div>
 
-  <!-- 4 Collaboration Domains -->
+  <!-- Key Metrics -->
   <div class="section">
-    <h2>&#127918; 4 Proposed NCIS Collaboration Domains</h2>
-    <div class="grid">
-      <div><div class="k">Domain 01 — Patient Management Agent</div><div class="v">AI chatbot: booking, symptom triage, Q&amp;R, follow-up, survivorship/community events, ChemoCalc cost guidance. For new patients, ongoing patients, and clinical trial patients.</div></div>
-      <div><div class="k">Domain 02 — Clinical Documentation Support</div><div class="v">AI drafts consultation notes, discharge summaries, and follow-up letters from doctor input — customisable via WorkBuddy to match NCIS templates. Doctor always reviews and signs off.</div></div>
-      <div><div class="k">Domain 03 — Unified Patient Health Records</div><div class="v">Tencent Report Analysis Agent consolidates patient reports and results from multiple visits/providers into one digital record, with a full patient timeline and free-text search.</div></div>
-      <div><div class="k">Domain 04 — Tencent Omics + WorkBuddy</div><div class="v">For researchers — the Omics Platform and WorkBuddy, both running on Tencent Cloud.</div></div>
-    </div>
-  </div>
-
-  <!-- 8-Agent WhatsApp Backend -->
-  <div class="section">
-    <h2>&#128172; NCIS WhatsApp Care Assistant — 8-Agent Backend</h2>
-    <p style="font-size:13px;color:#4A5568;margin-bottom:12px">Multi-agent orchestrator underpinning the NCIS Care Assistant demo shown during the visit.</p>
-    <div class="agent-grid">
-      <div>&#9679; <strong>Orchestrator agent</strong> — intent routing + free-text understanding</div>
-      <div>&#9679; <strong>Booking agent</strong> — schedule, reschedule, queue</div>
-      <div>&#9679; <strong>Referral &amp; triage agent</strong> — new patient pathway, symptom flags</div>
-      <div>&#9679; <strong>Health records agent</strong> — consolidated reports &amp; timeline Q&amp;A</div>
-      <div>&#9679; <strong>Care companion agent</strong> — survivorship &amp; community events</div>
-      <div>&#9679; <strong>Therapy consultation agent</strong> — grounded Q&amp;A on treatment &amp; care plan</div>
-      <div>&#9679; <strong>Financial counselling agent</strong> — ChemoCalc cost estimate</div>
-      <div>&#9679; <strong>Human handoff</strong> — nurse alert on red flags</div>
-    </div>
-    <p style="margin-top:14px;font-size:13px;color:#4A5568">Includes accessibility option (larger text) for elderly patients.</p>
-  </div>
-
-  <!-- 7 Follow-Ups -->
-  <div class="section">
-    <h2>&#128203; 7 Recommended Follow-Ups for NCIS/NUHS</h2>
-    <ol class="bullet-list">
-      <li><strong>AI-assisted staff copilot</strong> — approved information + recommended actions, human decision-making stays</li>
-      <li><strong>Patient navigation</strong> — guide patients to correct service, appointment, information, care team</li>
-      <li><strong>Oncology patient education</strong> — standardised approved information, complex questions escalated to clinicians</li>
-      <li><strong>Longitudinal patient support</strong> — reminders, symptom monitoring, survivorship support across the care journey</li>
-      <li><strong>Privacy-preserving analytics</strong> — controlled data environments, de-identification, governed data tagging</li>
-      <li><strong>Enterprise AI governance</strong> — common model standards, approval processes, monitoring, audit, and exit criteria</li>
-      <li><strong>AI-native process redesign</strong> — select one workflow and redesign end-to-end, not just add a chatbot</li>
-    </ol>
-  </div>
-
-  <!-- Open Challenges -->
-  <div class="section">
-    <h2>&#9888;&#65039; Open Challenges</h2>
+    <h2><span class="emoji">&#128200;</span> Key Metrics</h2>
     <table>
-      <tr><th>Challenge</th><th style="width:140px">Status</th></tr>
-      <tr>
-        <td><strong>Epic API capability</strong> — may be challenging</td>
-        <td class="red">&#128308; Major blocker</td>
-      </tr>
-      <tr>
-        <td>LLM local deployment — privacy agreement vs. buying GPU to deploy our own LLM</td>
-        <td class="amber">&#128309; TBC</td>
-      </tr>
-      <tr>
-        <td>Charging model — token-based vs. pay-per-use</td>
-        <td class="amber">&#128309; TBC</td>
-      </tr>
-      <tr>
-        <td>EHR integration via Tencent API</td>
-        <td class="amber">&#128309; TBC</td>
-      </tr>
-      <tr>
-        <td>Custom skills — can NCIS build their own?</td>
-        <td class="amber">&#128309; TBC</td>
-      </tr>
-      <tr>
-        <td>Elderly patient AI adoption — needs POC</td>
-        <td class="green">&#129002; Worth pursuing</td>
-      </tr>
-      <tr>
-        <td>Testing framework — auto test + team to verify</td>
-        <td class="green">&#129002; Addressable</td>
-      </tr>
+      <tr><th>Metric</th><th>Value</th></tr>
+      <tr><td>AI chatbot consultations (Shenzhen Hospital)</td><td>30,000+ monthly</td></tr>
+      <tr><td>Smart pre-consultation completion rate</td><td>>90%</td></tr>
+      <tr><td>Doctor time savings per consultation</td><td>12 min (avg)</td></tr>
+      <tr><td>Report one-click analysis coverage</td><td>3,000+ reports/day</td></tr>
+      <tr><td>Hospital total health screenings</td><td>3.87M+</td></tr>
+      <tr><td>Healthcare AI model (Milan)</td><td>Fully deployed, 5 departments</td></tr>
     </table>
   </div>
 
-  <!-- Key Philosophical Takeaway -->
+  <!-- Core Capabilities -->
   <div class="section">
-    <h2>&#128640; Key Takeaway</h2>
-    <div class="highlight">
-      Don't chase the most pilots. Build a governed, reusable, patient-centred AI capability that improves outcomes, supports healthcare professionals, and can operate safely within the Epic and Synapxe environment.
+    <h2><span class="emoji">&#128640;</span> Core Capabilities</h2>
+
+    <h3>Patient Journey — 7-Stage AI Lifecycle</h3>
+    <div class="bullet-list">
+      <li><strong>Appointment</strong> — WeChat mini-program booking</li>
+      <li><strong>Pre-Consultation</strong> — AI questionnaire (symptoms, history, allergies); doctor reviews before consult</li>
+      <li><strong>Consultation</strong> — Report one-click analysis; Report Interpretation Assistant (medical imaging, lab results)</li>
+      <li><strong>Health Screening</strong> — Add-on recommendation engine (Thyroid ¥90, Urine Microalbumin, Psychological ¥39)</li>
+      <li><strong>Medication</strong> — Personalised plan (e.g. Aspirin 2 tabs + Rosuvastatin 5 tabs, 3× daily)</li>
+      <li><strong>Medication Plan</strong> — Patient-friendly instructions, reminder scheduling</li>
+      <li><strong>Follow-up</strong> — AI-generated follow-up questions based on diagnosis and patient profile</li>
     </div>
-    <p style="margin-top:12px;font-size:13px;color:#4A5568">Tencent's strength is platform infrastructure — compute, model hub, agent orchestration, enterprise tools. Ping An's strength is operating discipline — AI as strategic infrastructure, governed and patient-centred.</p>
+
+    <h3>Platforms</h3>
+    <div class="bullet-list">
+      <li><strong>WorkBuddy</strong> — AI-powered work tool for staff; drafts consultation notes, discharge summaries, letters; doctor reviews &amp; signs off</li>
+      <li><strong>Tencent Health</strong> — Online healthcare services</li>
+      <li><strong>Tencent Medical Mimics AI (MiLan)</strong> — Deployed in 5 departments; multi-model integration</li>
+      <li><strong>Tencent Genomics</strong> — Omics data platform</li>
+      <li><strong>Token Hub</strong> — Agent token management, skills marketplace</li>
+      <li><strong>Palm Vein Payment</strong> — Cashless hospital payment</li>
+      <li><strong>Tencent Cloud Infrastructure</strong> — GPU compute layer, distributed data</li>
+    </div>
+
+    <h3>AI Use Cases (6 Scenarios)</h3>
+    <table>
+      <tr><th>Scenario</th><th>Example</th></tr>
+      <tr><td>Clinical Decision Support</td><td>MiLan differential diagnosis</td></tr>
+      <tr><td>Administrative Efficiency</td><td>Auto documentation, scheduling</td></tr>
+      <tr><td>Patient Experience</td><td>WeChat booking, medication reminders</td></tr>
+      <tr><td>R&amp;D / Coding</td><td>10% developer productivity uplift</td></tr>
+      <tr><td>Remote Care</td><td>Telemedicine, home health</td></tr>
+      <tr><td>Governance / Audit</td><td>Compliance, data security</td></tr>
+    </table>
+  </div>
+
+  <!-- NCIS Highlights -->
+  <div class="section">
+    <h2><span class="emoji">&#128100;</span> NCIS Highlights — 4 Proposed Collaboration Domains</h2>
+    <table>
+      <tr><th>Domain</th><th>Proposed Solution</th><th>NCIS Fit</th></tr>
+      <tr>
+        <td><strong>Patient Management Agent</strong></td>
+        <td>AI chatbot for booking, triage, Q&amp;R, survivorship, ChemoCalc cost guidance</td>
+        <td>Oncology patient navigation, appointment management</td>
+      </tr>
+      <tr>
+        <td><strong>Clinical Documentation</strong></td>
+        <td>AI drafts notes/discharge summaries/follow-up letters; doctor reviews &amp; finalises</td>
+        <td>NCIS oncology documentation load reduction</td>
+      </tr>
+      <tr>
+        <td><strong>Unified Patient Health Records</strong></td>
+        <td>Report Analysis Agent, full timeline, free-text search across visits/providers</td>
+        <td>Multi-provider cancer patient journey continuity</td>
+      </tr>
+      <tr>
+        <td><strong>Tencent Omics + WorkBuddy</strong></td>
+        <td>For researchers — Omics Platform + WorkBuddy on Tencent Cloud</td>
+        <td>NCIS research data infrastructure</td>
+      </tr>
+    </table>
+
+    <h3>8-Agent WhatsApp Care Assistant Backend</h3>
+    <div class="agent-grid">
+      <div>&#128276; Appointment Agent</div>
+      <div>&#128276; Triage Agent</div>
+      <div>&#128276; Q&amp;A Agent</div>
+      <div>&#128276; Follow-up Agent</div>
+      <div>&#128276; Survivorship Agent</div>
+      <div>&#128276; Community Events Agent</div>
+      <div>&#128276; ChemoCalc Agent</div>
+      <div>&#128276; Escalation Agent</div>
+    </div>
+
+    <h3>Demo: Unified Health Record (Ovarian Cancer Patient)</h3>
+    <div class="highlight">
+      <strong>61F, High-grade serous ovarian carcinoma, Stage IIIC.</strong><br>
+      Timeline across 4 providers (NCIS Oncology, NCIS Radiology, NCIS Lab, NUH Gynae-Oncology) — 7 reports with free-text search: <em>"When was the last CA-125 result?"</em> → AI returns 25 Mar 2026, CA-125 42 U/mL.
+    </div>
+  </div>
+
+  <!-- NCIS Relevance -->
+  <div class="section">
+    <h2><span class="emoji">&#128137;</span> NCIS Relevance</h2>
+    <table>
+      <tr><th>Tencent Capability</th><th>NCIS Application</th></tr>
+      <tr><td>Patient Management Agent (chatbot, triage, survivorship)</td><td>Oncology patient education, appointment management, survivorship support</td></tr>
+      <tr><td>Clinical Documentation AI (WorkBuddy)</td><td>Reduce NCIS oncologist documentation burden; doctor reviews &amp; signs</td></tr>
+      <tr><td>Unified Health Records (multi-provider timeline)</td><td>Continuity for NCIS patients seen across institutions (NUH, SGH, CGH)</td></tr>
+      <tr><td>MiLan clinical decision support</td><td>Diagnostic AI for NCIS pathology/radiology</td></tr>
+      <tr><td>AI-native process redesign methodology</td><td>Redesign NCIS workflows end-to-end, not just add a chatbot</td></tr>
+    </table>
+  </div>
+
+  <!-- Follow-Ups -->
+  <div class="section">
+    <h2><span class="emoji">&#128203;</span> 7 Recommended Follow-Ups for NCIS</h2>
+    <ol class="follow-ups">
+      <li><strong>AI governance framework</strong> — adapt Tencent's privacy/security model for NCIS within SingHealth/Synapxe/Epic ecosystem</li>
+      <li><strong>Patient-facing AI</strong> — chatbot/voice agent for appointment, navigation, survivorship support (8-agent model)</li>
+      <li><strong>Clinical documentation AI pilot</strong> — WorkBuddy-style draft, doctor reviews &amp; signs; start with oncology discharge summaries</li>
+      <li><strong>Unified patient timeline</strong> — explore multi-provider record consolidation for NCIS oncology patients</li>
+      <li><strong>AI-native process redesign</strong> — apply Tencent's 6-scenario framework: pick one NCIS workflow, redesign end-to-end</li>
+      <li><strong>Omics + research infrastructure</strong> — evaluate Tencent Genomics platform for NCIS research data needs</li>
+      <li><strong>Staff AI copilot</strong> — Tencent-style staff-first approach; engage NCIS staff before patient-facing AI</li>
+    </ol>
   </div>
 
   <!-- Visit Details -->
   <div class="section">
-    <h2>&#128205; Visit Details</h2>
+    <h2><span class="emoji">&#128205;</span> Visit Details</h2>
+    <div class="visit-grid">
+      <div class="k">Organisation</div><div class="v">Tencent (腾讯)</div>
+      <div class="k">Presenter</div><div class="v">Caroline Haoran Song (宋浩然)</div>
+      <div class="k">Location</div><div class="v">Shenzhen, China</div>
+      <div class="k">Date</div><div class="v">20 July 2026 (Day 1)</div>
+      <div class="k">Slides covered</div><div class="v">19 slides</div>
+      <div class="k">Focus</div><div class="v">Healthcare AI: patient journey, staff tools, platform, NCIS collab</div>
+    </div>
+  </div>
+
+  <!-- Open Challenges -->
+  <div class="section">
+    <h2><span class="emoji">&#9888;</span> Open Challenges</h2>
     <table>
-      <tr><th style="width:160px">Organisation</th><td>Tencent (腾讯) — Binhai Mansion, Nanshan District, Shenzhen</td></tr>
-      <tr><th>Hosts</th><td>Caroline Haoran Song (Solution Architect), Rayman Zhu (Solution Architect), Aaron Zhong (Solution Architect), Leslie Wang (Solution Director), Dr. Qianyi Wang (GM, Tencent Healthcare)</td></tr>
-      <tr><th>Date</th><td>Monday 20 July 2026, 09:00–11:30</td></tr>
-      <tr><th>Slides covered</th><td>19 slides (general Tencent + NCIS proposals + demos)</td></tr>
-      <tr><th>Handwritten notes</th><td>2 pages, 15 discussion topics captured</td></tr>
+      <tr><th>Topic</th><th>Question</th><th>Priority</th></tr>
+      <tr><td>Charging model</td><td>Token-based? Pay by usage?</td><td class="red">&#9679;</td></tr>
+      <tr><td>Hospital harness</td><td>Can Tencent build a harness for different hospitals' APIs?</td><td class="amber">&#9679;</td></tr>
+      <tr><td>Privacy / BAU</td><td>How does model access to source data affect privacy and BAU?</td><td class="red">&#9679;</td></tr>
+      <tr><td>Model training</td><td>How easy to train baseline model on NCIS guidelines?</td><td class="amber">&#9679;</td></tr>
+      <tr><td>Testing &amp; verification</td><td>Can NCIS build a team to verify auto-test results?</td><td class="amber">&#9679;</td></tr>
+      <tr><td>Elderly patients</td><td>Ping An doing POC — how does this apply to NCIS elderly oncology patients?</td><td class="green">&#9679;</td></tr>
+      <tr><td>Local LLM deployment</td><td>Privacy agreement required, or buy GPU to deploy own LLM?</td><td class="red">&#9679;</td></tr>
+      <tr><td>EHR integration</td><td>Using Tencent API — how does this integrate with Epic (Synapxe)?</td><td class="red">&#9679;</td></tr>
+      <tr><td>Custom skills</td><td>Can NCIS build its own custom skills on Tencent platform?</td><td class="amber">&#9679;</td></tr>
+      <tr><td>Epic API capability</td><td>&#9888; <strong>Flag:</strong> Epic API capability may be challenging</td><td class="red">&#9679;</td></tr>
     </table>
+  </div>
+
+  <!-- Philosophical Takeaway -->
+  <div class="section">
+    <h2><span class="emoji">&#128640;</span> Philosophical Takeaway</h2>
+    <div class="highlight">
+      AI is a <strong>staff-first enabler</strong>, not just a patient-facing tool. Tencent's model: give clinicians AI that saves them time, and the patient experience improves as a byproduct. <em>"Build for the people delivering care, not just the people receiving it."</em>
+    </div>
   </div>
 
   <hr class="divider">
 
   <div class="days-nav">
     <a class="day-btn active" href="#">Day 1 — Tencent (20 Jul)</a>
-    <a class="day-btn" href="#">Day 2 — Shenzhen People's Hospital (21 Jul)</a>
+    <a class="day-btn" href="takeaways-day1-pingan.html">Day 1 — Ping An (20 Jul)</a>
+    <a class="day-btn" href="#">Day 2 — SZ People's Hospital (21 Jul)</a>
     <a class="day-btn" href="#">Day 3 — XtalPi (22 Jul)</a>
   </div>
 
-  <p class="file-ref" style="margin-top:24px">
+  <p class="file-ref">
     Full markdown: <code>Dropbox/01. Work/NUHS/NCIS-Study-Trip/Takeaways/Day1_Tencent_20260720.md</code>
   </p>
 
