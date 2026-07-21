@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day 1 Takeaways — Tencent | NCIS Shenzhen Trip 2026</title>
+<style>
+:root{--c-tencent:#1E5AFF;--c-bg:#F5F7FB;--c-white:#ffffff;--c-text:#1A1A1A;--c-muted:#718096;--c-red:#C8102E;--c-amber:#B8860B;--c-green:#0A6EBD}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"Segoe UI","Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--c-bg);color:var(--c-text);line-height:1.6;font-size:15px}
+.page{max-width:900px;margin:0 auto;padding:0 24px 80px}
+.back-link{display:inline-flex;align-items:center;gap:6px;padding:16px 0 0;font-size:13px;color:var(--c-muted);text-decoration:none}
+.back-link:hover{color:var(--c-tencent)}
+.hero{background:var(--c-tencent);color:white;padding:48px 40px 40px;border-radius:0 0 28px 28px;margin-bottom:36px}
+.hero .day{font-size:12px;text-transform:uppercase;letter-spacing:2px;opacity:.85;margin-bottom:8px}
+.hero h1{font-size:36px;font-weight:800;margin-bottom:8px}
+.hero .sub{font-size:16px;opacity:.92}
+.section{background:var(--c-white);border-radius:20px;padding:28px 32px;margin-bottom:24px;box-shadow:0 2px 16px rgba(0,0,0,.05);border:1px solid #EAEEF6}
+.section h2{font-size:20px;font-weight:700;color:var(--c-tencent);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.section h3{font-size:13px;text-transform:uppercase;letter-spacing:1px;color:var(--c-muted);margin:20px 0 10px;border-bottom:1px solid #EAEEF6;padding-bottom:6px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin-top:8px}
+.grid .k{font-weight:600;color:var(--c-text);font-size:13px}
+.grid .v{font-size:13px;color:#4A5568}
+.agent-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px;font-size:13px;margin-top:8px}
+.agent-grid div{padding:4px 0}
+.bullet-list{margin-left:20px}
+.bullet-list li{margin-bottom:6px;font-size:14px}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{border:1px solid #EAEEF6;padding:10px 14px;text-align:left;font-size:13px}
+th{background:var(--c-tencent);color:white;font-size:11px;text-transform:uppercase;letter-spacing:1px}
+tr:nth-child(even){background:#F8FAFC}
+.red{color:var(--c-red);font-weight:700}
+.amber{color:var(--c-amber)}
+.green{color:var(--c-green)}
+.highlight{background:linear-gradient(135deg,#EEF2FB 0%,#F8FAFC 100%);border-radius:12px;padding:16px 20px;font-size:14px;border-left:4px solid var(--c-tencent)}
+.file-ref{font-size:12px;color:var(--c-muted);margin-top:16px}
+.file-ref code{background:#F0F0F0;padding:2px 6px;border-radius:4px;font-size:11px}
+.days-nav{display:flex;gap:10px;margin-top:32px;flex-wrap:wrap}
+.day-btn{display:inline-block;padding:10px 18px;background:var(--c-white);border:1px solid #EAEEF6;border-radius:12px;font-size:13px;font-weight:600;color:var(--c-tencent);text-decoration:none;transition:all .15s}
+.day-btn.active{background:var(--c-tencent);color:white;border-color:var(--c-tencent)}
+.day-btn:hover:not(.active){background:#EEF2FB}
+.divider{border:none;border-top:1px solid #EAEEF6;margin:32px 0}
+@media(max-width:600px){
+  .hero{padding:32px 22px 28px}
+  .hero h1{font-size:26px}
+  .section{padding:20px 20px}
+  .grid,.agent-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <a class="back-link" href="index-for-sharing.html">&#8592; Back to Trip Overview</a>
+
+  <div class="hero">
+    <div class="day">Day 1 — Monday 20 July 2026</div>
+    <h1>&#128220; Tencent Takeaways</h1>
+    <div class="sub">Tencent Binhai Mansion, Shenzhen &middot; Caroline Song &amp; team</div>
+  </div>
+
+  <!-- 4 Collaboration Domains -->
+  <div class="section">
+    <h2>&#127918; 4 Proposed NCIS Collaboration Domains</h2>
+    <div class="grid">
+      <div><div class="k">Domain 01 — Patient Management Agent</div><div class="v">AI chatbot: booking, symptom triage, Q&amp;R, follow-up, survivorship/community events, ChemoCalc cost guidance. For new patients, ongoing patients, and clinical trial patients.</div></div>
+      <div><div class="k">Domain 02 — Clinical Documentation Support</div><div class="v">AI drafts consultation notes, discharge summaries, and follow-up letters from doctor input — customisable via WorkBuddy to match NCIS templates. Doctor always reviews and signs off.</div></div>
+      <div><div class="k">Domain 03 — Unified Patient Health Records</div><div class="v">Tencent Report Analysis Agent consolidates patient reports and results from multiple visits/providers into one digital record, with a full patient timeline and free-text search.</div></div>
+      <div><div class="k">Domain 04 — Tencent Omics + WorkBuddy</div><div class="v">For researchers — the Omics Platform and WorkBuddy, both running on Tencent Cloud.</div></div>
+    </div>
+  </div>
+
+  <!-- 8-Agent WhatsApp Backend -->
+  <div class="section">
+    <h2>&#128172; NCIS WhatsApp Care Assistant — 8-Agent Backend</h2>
+    <p style="font-size:13px;color:#4A5568;margin-bottom:12px">Multi-agent orchestrator underpinning the NCIS Care Assistant demo shown during the visit.</p>
+    <div class="agent-grid">
+      <div>&#9679; <strong>Orchestrator agent</strong> — intent routing + free-text understanding</div>
+      <div>&#9679; <strong>Booking agent</strong> — schedule, reschedule, queue</div>
+      <div>&#9679; <strong>Referral &amp; triage agent</strong> — new patient pathway, symptom flags</div>
+      <div>&#9679; <strong>Health records agent</strong> — consolidated reports &amp; timeline Q&amp;A</div>
+      <div>&#9679; <strong>Care companion agent</strong> — survivorship &amp; community events</div>
+      <div>&#9679; <strong>Therapy consultation agent</strong> — grounded Q&amp;A on treatment &amp; care plan</div>
+      <div>&#9679; <strong>Financial counselling agent</strong> — ChemoCalc cost estimate</div>
+      <div>&#9679; <strong>Human handoff</strong> — nurse alert on red flags</div>
+    </div>
+    <p style="margin-top:14px;font-size:13px;color:#4A5568">Includes accessibility option (larger text) for elderly patients.</p>
+  </div>
+
+  <!-- 7 Follow-Ups -->
+  <div class="section">
+    <h2>&#128203; 7 Recommended Follow-Ups for NCIS/NUHS</h2>
+    <ol class="bullet-list">
+      <li><strong>AI-assisted staff copilot</strong> — approved information + recommended actions, human decision-making stays</li>
+      <li><strong>Patient navigation</strong> — guide patients to correct service, appointment, information, care team</li>
+      <li><strong>Oncology patient education</strong> — standardised approved information, complex questions escalated to clinicians</li>
+      <li><strong>Longitudinal patient support</strong> — reminders, symptom monitoring, survivorship support across the care journey</li>
+      <li><strong>Privacy-preserving analytics</strong> — controlled data environments, de-identification, governed data tagging</li>
+      <li><strong>Enterprise AI governance</strong> — common model standards, approval processes, monitoring, audit, and exit criteria</li>
+      <li><strong>AI-native process redesign</strong> — select one workflow and redesign end-to-end, not just add a chatbot</li>
+    </ol>
+  </div>
+
+  <!-- Open Challenges -->
+  <div class="section">
+    <h2>&#9888;&#65039; Open Challenges</h2>
+    <table>
+      <tr><th>Challenge</th><th style="width:140px">Status</th></tr>
+      <tr>
+        <td><strong>Epic API capability</strong> — may be challenging</td>
+        <td class="red">&#128308; Major blocker</td>
+      </tr>
+      <tr>
+        <td>LLM local deployment — privacy agreement vs. buying GPU to deploy our own LLM</td>
+        <td class="amber">&#128309; TBC</td>
+      </tr>
+      <tr>
+        <td>Charging model — token-based vs. pay-per-use</td>
+        <td class="amber">&#128309; TBC</td>
+      </tr>
+      <tr>
+        <td>EHR integration via Tencent API</td>
+        <td class="amber">&#128309; TBC</td>
+      </tr>
+      <tr>
+        <td>Custom skills — can NCIS build their own?</td>
+        <td class="amber">&#128309; TBC</td>
+      </tr>
+      <tr>
+        <td>Elderly patient AI adoption — needs POC</td>
+        <td class="green">&#129002; Worth pursuing</td>
+      </tr>
+      <tr>
+        <td>Testing framework — auto test + team to verify</td>
+        <td class="green">&#129002; Addressable</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Key Philosophical Takeaway -->
+  <div class="section">
+    <h2>&#128640; Key Takeaway</h2>
+    <div class="highlight">
+      Don't chase the most pilots. Build a governed, reusable, patient-centred AI capability that improves outcomes, supports healthcare professionals, and can operate safely within the Epic and Synapxe environment.
+    </div>
+    <p style="margin-top:12px;font-size:13px;color:#4A5568">Tencent's strength is platform infrastructure — compute, model hub, agent orchestration, enterprise tools. Ping An's strength is operating discipline — AI as strategic infrastructure, governed and patient-centred.</p>
+  </div>
+
+  <!-- Visit Details -->
+  <div class="section">
+    <h2>&#128205; Visit Details</h2>
+    <table>
+      <tr><th style="width:160px">Organisation</th><td>Tencent (腾讯) — Binhai Mansion, Nanshan District, Shenzhen</td></tr>
+      <tr><th>Hosts</th><td>Caroline Haoran Song (Solution Architect), Rayman Zhu (Solution Architect), Aaron Zhong (Solution Architect), Leslie Wang (Solution Director), Dr. Qianyi Wang (GM, Tencent Healthcare)</td></tr>
+      <tr><th>Date</th><td>Monday 20 July 2026, 09:00–11:30</td></tr>
+      <tr><th>Slides covered</th><td>19 slides (general Tencent + NCIS proposals + demos)</td></tr>
+      <tr><th>Handwritten notes</th><td>2 pages, 15 discussion topics captured</td></tr>
+    </table>
+  </div>
+
+  <hr class="divider">
+
+  <div class="days-nav">
+    <a class="day-btn active" href="#">Day 1 — Tencent (20 Jul)</a>
+    <a class="day-btn" href="#">Day 2 — Shenzhen People's Hospital (21 Jul)</a>
+    <a class="day-btn" href="#">Day 3 — XtalPi (22 Jul)</a>
+  </div>
+
+  <p class="file-ref" style="margin-top:24px">
+    Full markdown: <code>Dropbox/01. Work/NUHS/NCIS-Study-Trip/Takeaways/Day1_Tencent_20260720.md</code>
+  </p>
+
+</div>
+</body>
+</html>
