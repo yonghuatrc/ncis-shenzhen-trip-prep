@@ -21,6 +21,7 @@ The pre-read is a single self-contained HTML page — just open `index.html` in 
 - [personal-trip.html](https://yonghuatrc.github.io/ncis-shenzhen-trip-prep/personal-trip.html)
 - [shenzhen-food-guide.html](https://yonghuatrc.github.io/ncis-shenzhen-trip-prep/shenzhen-food-guide.html)
 - [shenzhen-personal-trip-2026.html](https://yonghuatrc.github.io/ncis-shenzhen-trip-prep/shenzhen-personal-trip-2026.html)
+- [takeaways-day1-pingan.html](https://yonghuatrc.github.io/ncis-shenzhen-trip-prep/takeaways-day1-pingan.html)
 - [takeaways-day1-tencent.html](https://yonghuatrc.github.io/ncis-shenzhen-trip-prep/takeaways-day1-tencent.html)
 
 <!-- AUTO-LIST-END -->
